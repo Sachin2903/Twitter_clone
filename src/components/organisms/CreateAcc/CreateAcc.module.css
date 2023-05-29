@@ -1,0 +1,80 @@
+body {
+    background-color: rgb(128, 128, 128);
+}
+
+.main_container_create_acc {
+    width: 520px;
+    min-width: 520px;
+    height: 90%;
+    margin: auto;
+    margin-top: 4rem;
+    border-radius: 25px;
+    background-color: rgb(255, 255, 255);
+    padding: 10px;
+}
+
+.sub_container_acc_new h1 {
+    font-family: inherit;
+    text-align: center;
+    color: rgb(0, 0, 0);
+}
+
+.input_field {
+    width: 80%;
+}
+
+#first_heading {
+    font-weight: 20px;
+    font-family: inherit;
+    font-weight: bolder;
+    color: black;
+}
+
+.date_section p {
+    color: rgb(90, 90, 90);
+    padding: 0px 45px;
+
+}
+
+.select1 {
+    width: 150px;
+    height: 9vh;
+    margin-right: 18px;
+    border-radius: 4px;
+    text-align: center;
+    font-size: 15px;
+    font-weight: bolder;
+    font-family: inherit;
+}
+
+.select {
+    height: 9vh;
+    margin-right: 18px;
+    border-radius: 4px;
+    text-align: center;
+    font-size: 15px;
+    font-weight: bolder;
+    font-family: inherit;
+    min-width: 80px;
+}
+
+.btn_create {
+    margin-top: 32px;
+    width: 80%;
+    border: none;
+    font-weight: bolder;
+    font-size: 18px;
+    padding: 15px;
+    text-align: center;
+    background-color: gray;
+    color: white;
+    border-radius: 35px;
+    cursor: pointer;
+    transition: .2s ease-in-out;
+}
+
+.btn_create:hover {
+    background-color: black;
+    color: white;
+    transition: .2s ease-in-out;
+}
