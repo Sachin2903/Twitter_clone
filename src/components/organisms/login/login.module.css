@@ -1,0 +1,75 @@
+.loginbox{
+    position: relative;
+    min-width: 520px;
+    width: 540px;
+    height: 90%;
+    border-radius: 15px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+}
+.logotwitter{
+    font-size: 28px;
+    margin-top: 8px;
+    color: rgb(27, 169, 225);
+}
+.btngoogle,.btnnext,.btnapple{
+    height:33px;
+    width: 50%;
+    border-radius: 44px;
+    background-color: white;
+    cursor: pointer;
+    border: 0.5px solid black;
+
+}
+.btnapple{
+    font-weight: bold;
+    margin:15px;
+}
+.btnnext{
+    font-weight: bold;
+    color: white;
+    background-color: black;
+}
+.btngoogle:hover{
+    background-color: rgba(231, 233, 245, 0.854);
+
+}
+.btnapple:hover{
+    background-color: rgb(235, 234, 234);
+}
+.headtext{
+ 
+    width: 50%;
+}
+.ortext::before{
+    content: "----------------- ";
+
+}
+.ortext::after{
+    content: " -----------------";
+
+}
+.ortext{
+    margin-top: -10px;
+    
+}
+.crossbtn{
+   position: absolute;
+   left: 13px;
+   top:13px;
+   cursor: none;
+   font-size: 1.3em;
+}
+
+@media (width<=717px) {
+    .loginbox{
+        padding-top: 200px;
+        border-radius: 0;
+        width: 100vw;
+        height: 100vh;
+    }
+    
+}
