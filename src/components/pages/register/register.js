@@ -1,6 +1,6 @@
 import { Fragment } from "react";
 import styles from "./register.module.css";
-import { CreateAccOfTwitter } from "../../organisms/CreateAcc/createAccount";
+
 
 
 
@@ -18,7 +18,7 @@ export function SignInUp() {
 
             </div> */}
 
-            <CreateAccOfTwitter />
+
 
 
 
