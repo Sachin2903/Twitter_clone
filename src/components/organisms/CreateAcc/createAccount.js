@@ -2,7 +2,7 @@
 import { Fragment } from 'react';
 import CreateAcc from './CreateAcc.module.css'
 import { TextField } from '@mui/material';
-
+import {RxCross2 } from "react-icons/rx";
 
 export function CreateAccOfTwitter() {
     const textFieldStyles = {
@@ -26,6 +26,7 @@ export function CreateAccOfTwitter() {
     return (
         <Fragment>
             <div className={CreateAcc.main_container_create_acc}>
+            <RxCross2 className={CreateAcc.crossbtnaccount}/>
 
                 <div className={CreateAcc.sub_container_acc_new}>
 

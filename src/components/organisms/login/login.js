@@ -3,14 +3,14 @@ import styles from "./login.module.css";
 import { BsTwitter } from "react-icons/bs";
 import { FcGoogle } from "react-icons/fc"
 import { BsApple } from "react-icons/bs";
-import {RxCross2 } from "react-icons/rx";
+import { RxCross2 } from "react-icons/rx";
 import TextField from '@mui/material/TextField';
 export function Login() {
     return (
         <Fragment>
 
             <div className={styles.loginbox}>
-               <RxCross2 className={styles.crossbtn}/>
+                <RxCross2 className={styles.crossbtn} />
                 <BsTwitter className={styles.logotwitter} />
                 <h2 className={styles.headtext}>Sign in to Twitter</h2>
                 <button className={styles.btngoogle}><FcGoogle /> Sign in with Google</button>
@@ -18,13 +18,13 @@ export function Login() {
                 <p className={styles.ortext}> or </p>
 
                 <TextField
-                    sx={{width:"50%"}}
+                    sx={{ width: "50%" }}
                     label="Phone Number"
                     multiline
 
                 />
                 <TextField
-                    sx={{width:"50%",margin:"15px 0px 15px 0px"}}
+                    sx={{ width: "50%", margin: "15px 0px 15px 0px" }}
                     label="Password"
                     multiline
 

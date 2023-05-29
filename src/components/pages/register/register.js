@@ -1,7 +1,7 @@
 import { Fragment } from "react";
 import styles from "./register.module.css";
 import { Login } from "../../organisms/login/login";
-
+import {CreateAccOfTwitter} from "../../organisms/CreateAcc/createAccount"
 
 
 export function SignInUp() {
@@ -9,8 +9,8 @@ export function SignInUp() {
       <Fragment>
          <div className={styles.mainbox}>
 
-          <Login/>
-
+     
+           <CreateAccOfTwitter/>
             {/* min-width : 280px 
             widith : 280px
                height : 90%  */}
