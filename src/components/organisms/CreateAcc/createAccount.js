@@ -12,7 +12,7 @@ export function CreateAccOfTwitter() {
 
 
     const labelStyles = {
-        color: 'gray',
+        color: 'black',
     }
 
 
