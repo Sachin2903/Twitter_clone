@@ -7,14 +7,14 @@ import { RxCross2 } from "react-icons/rx";
 import TextField from '@mui/material/TextField';
 import { Link } from "react-router-dom";
 import { useRef } from "react";
+import { useNavigate } from "react-router-dom";
+
 export function Login() {
+    const navigateToHomeFromlogin = useNavigate();
     const inputbox = useRef("");
     const inputboxalert = useRef("");
 
-
-
-
-
+    let userDataFromLocal = JSON.parse(localStorage.getItem("userData"));
 
 
     function checkLoginField() {
@@ -25,6 +25,16 @@ export function Login() {
             }, 4000)
 
         } else {
+            if (userDataFromLocal&&(userDataFromLocal.Name===inputbox.current.value.trim()||userDataFromLocal.Phone===inputbox.current.value.trim()||userDataFromLocal.Email===inputbox.current.value.trim())) {
+
+                navigateToHomeFromlogin("/home")
+            }else{
+                inputboxalert.current.style.display = "block";
+                setTimeout(() => {
+                    inputboxalert.current.style.display = "none";
+                }, 2000)
+            }
+
 
         }
 
@@ -56,11 +66,10 @@ export function Login() {
 
                 <button onClick={checkLoginField} className={styles.btnnext}>Next</button>
                 <button className={styles.btnapple}>Forgot password?</button>
-                <p className={styles.headtext}>Don't have an account?
-                    <p ref={inputboxalert} className={styles.alertbox}>Sorry, we could not find your account.</p>
-
+                <p className={styles.headtext}>Don't have an account?<span ref={inputboxalert} className={styles.alertbox}>Sorry, we could not find your account.</span>
                     <span style={{ color: "rgb(27, 169, 225)", cursor: "pointer" }}>
                         <Link className={styles.signuptext} to="/signuppage">Sign up</Link></span></p>
+
             </div>
 
         </Fragment>

@@ -104,6 +104,24 @@
     cursor: pointer;
     transition: .2s ease-in-out;
 }
+.invalidalert{
+    box-shadow: 0 0 3px rgb(68, 67, 67);
+    cursor: none;
+    position: absolute;
+    display: none;
+    z-index: 9999;
+    top: 0;
+    right: 0;
+    background-color: rgb(109, 199, 255);
+    height: 5vh;
+    border-top-left-radius: 44px;
+    border-bottom-left-radius: 44px;
+    font-weight: bold;
+    padding:1%;
+ 
+    font-family: monospace;
+    width: 50%;
+}
 
 @media (width<=717px) {
     .main_container_create_acc {
