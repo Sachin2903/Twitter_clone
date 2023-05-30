@@ -79,3 +79,19 @@
     color: rgb(89, 134, 231);
 
 }
+.alertbox{
+    box-shadow: 0 0 3px rgb(68, 67, 67);
+    cursor: none;
+    position: absolute;
+    display: none;
+    z-index: 9999;
+    bottom: 5px;
+    background-color:rgb(109, 199, 255) ;
+    height: 6vh;
+    border-radius:6px;
+    text-align: center;
+    padding:1.5vh 0;
+   word-break:keep-all;
+    font-family: monospace;
+    width: 65%;
+}
