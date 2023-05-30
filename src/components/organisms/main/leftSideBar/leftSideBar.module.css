@@ -55,9 +55,9 @@
     transform: translateY(-4px);
 }
 .imge{
-    width: 80px;
+    width: 60px;
     border-radius: 50%;
-    height: 80px;
+    margin: 3px;
     margin-left: 10px;
 }
 .profile{
@@ -65,4 +65,3 @@
     height: 70px;
     display: flex;
 }
-
