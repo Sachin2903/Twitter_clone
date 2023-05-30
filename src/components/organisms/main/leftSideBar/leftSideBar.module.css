@@ -55,9 +55,9 @@
     transform: translateY(-4px);
 }
 .imge{
-    width: 60px;
+    width: 80px;
     border-radius: 50%;
-    margin: 3px;
+    height: 80px;
     margin-left: 10px;
 }
 .profile{

@@ -9,6 +9,7 @@ import {RiFileListLine} from "react-icons/ri"
 import {BiBookmark} from "react-icons/bi"
 import {CgProfile} from "react-icons/cg"
 import {CiCircleMore} from "react-icons/ci"
+import logo123 from "../../../../image/logo/836-removebg-preview.png"
 
 export function LeftSideBar(){
     return (
@@ -27,7 +28,7 @@ export function LeftSideBar(){
            
               <button className={styles.tweet}>Tweet</button>
               <div className={styles.profile}>
-                 <img className={styles.imge} src="https://img.freepik.com/free-psd/3d-illustration-person-with-sunglasses_23-2149436188.jpg?w=360&t=st=1685463036~exp=1685463636~hmac=2d5357a2e8f08296abd57f7778b113ef2de9e19b5f273c64e99cc0334cab2ba3" alt="avater"/> 
+                 <img className={styles.imge} src={logo123} alt="avater"/> 
                  <div> <h3>Tony Stark</h3>  @tony stark </div> 
               </div>
             </div>
