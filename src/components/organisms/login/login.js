@@ -22,7 +22,7 @@ export function Login() {
             inputboxalert.current.style.display = "block";
             setTimeout(() => {
                 inputboxalert.current.style.display = "none";
-            }, 2000)
+            }, 4000)
 
         }else{
            

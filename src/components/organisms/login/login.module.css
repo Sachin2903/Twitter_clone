@@ -1,7 +1,7 @@
 .loginbox{
   
     min-width: 540px;
-
+  position: relative;
     width: 540px;
     height: 90%;
     border-radius: 15px;
