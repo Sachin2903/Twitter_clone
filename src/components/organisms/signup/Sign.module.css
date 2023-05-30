@@ -1,69 +1,111 @@
-.main{
+.signsignbox{
+    
+      background-color:rgba(91, 112, 131, 0.4) ;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content:center ;
+    align-items: center;
+
+
+}
+
+.main {
+    position: relative;
     min-width: 540px;
     width: 540px;
     height: 90%;
     border-radius: 15px;
     background-color: white;
     font-size: 22px;
-    font-family: inherit;
+
     display: flex;
     align-items: center;
-    justify-content:  space-evenly;
+    justify-content: space-around;
     flex-direction: column;
 }
-.main:hover{
-    box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, 
-    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
-    
-  
+
+.logos {
+    font-size: 15px;
+
+
 }
-.logos{
-    font-size: 20px;
-    margin: auto;
-    
+
+.firsthead {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
-.firsthead{
-     
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-     
-        margin-top: 10px;
-   
+
+.logo {
+    font-size: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
-.logo{
-  font-size: 52px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-}
-.Onelogo{
+
+
+.Onelogo {
+    color: black;
     background-color: aliceblue;
-    width: 25vw;
-    padding: 14px;
+    width: 80%;
+   height: 33px;
+   border:0.1px solid black;
+   padding-top: 4px;
     border-radius: 47px;
-    border-radius: 45px;
-    font-size: 20px;
+    margin:10px 0px;
+    font-size: 16px;
     cursor: pointer;
     display: flex;
-    justify-content:  center;
+    justify-content: center;
+    text-decoration: none;
 
 }
-.info{
-  
-    padding: 1rem;
-    margin-top: -3rem;
-   
+.nocursor{
+    cursor:none;
+}
+.info {
  
-}
-.info h5{
-    padding-left: 5rem;
+ width: 85%;
+ 
     
+    margin-top: -3rem;
     
+
+
 }
 
-span{
+.haedh5 {
+    padding-left: 5rem;
+
+
+}
+
+.specialtext {
     color: rgb(34, 97, 233);
+}
+
+
+@media (width<=717px) {
+    .main{
+        padding-top: 50px;
+        border-radius: 0;
+        width: 100vw;
+        height: 100vh;
+    }
+}
+.loginredirect{
+    font-weight: 500;
+    text-decoration: none;
+    color: rgb(89, 134, 231);
+}
+.crossbtn{
+    position: absolute;
+    left: 13px;
+    top:13px;
+    cursor: none;
+    font-size: 1em;
 }

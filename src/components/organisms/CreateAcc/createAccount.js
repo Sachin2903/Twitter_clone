@@ -25,6 +25,7 @@ export function CreateAccOfTwitter() {
 
     return (
         <Fragment>
+            <div className={CreateAcc.createaccountpage}>
             <div className={CreateAcc.main_container_create_acc}>
             <RxCross2 className={CreateAcc.crossbtnaccount}/>
 
@@ -157,6 +158,7 @@ export function CreateAccOfTwitter() {
                 </div>
 
 
+            </div>
             </div>
         </Fragment>
     )

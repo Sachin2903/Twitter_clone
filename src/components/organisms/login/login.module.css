@@ -1,6 +1,7 @@
 .loginbox{
     position: relative;
     min-width: 540px;
+
     width: 540px;
     height: 90%;
     border-radius: 15px;
@@ -41,7 +42,7 @@
     background-color: rgb(235, 234, 234);
 }
 .headtext{
- 
+    margin: 15px 0px;
     width: 50%;
 }
 .ortext::before{
@@ -66,10 +67,15 @@
 
 @media (width<=717px) {
     .loginbox{
-        padding-top: 200px;
+        padding-top: 50px;
         border-radius: 0;
         width: 100vw;
         height: 100vh;
     }
     
+}
+.signuptext{
+    text-decoration: none;
+    color: rgb(89, 134, 231);
+
 }

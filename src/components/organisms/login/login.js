@@ -5,6 +5,7 @@ import { FcGoogle } from "react-icons/fc"
 import { BsApple } from "react-icons/bs";
 import { RxCross2 } from "react-icons/rx";
 import TextField from '@mui/material/TextField';
+import { Link } from "react-router-dom";
 export function Login() {
     return (
         <Fragment>
@@ -32,7 +33,8 @@ export function Login() {
 
                 <button className={styles.btnnext}>Next</button>
                 <button className={styles.btnapple}>Forgot password?</button>
-                <p className={styles.headtext}>Don't have an account?<span style={{ color: "rgb(27, 169, 225)", cursor: "pointer" }}>Sign up</span></p>
+                <p className={styles.headtext}>Don't have an account?<span style={{ color: "rgb(27, 169, 225)", cursor: "pointer" }}>
+                    <Link className={styles.signuptext} to="/signuppage">Sign up</Link></span></p>
             </div>
 
         </Fragment>
