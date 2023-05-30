@@ -1,11 +1,15 @@
 import { Fragment } from "react";
-
-
+import {HeroSection} from "../../templates/herosection/heroSection.js"
+import styles from "./home.module.css"
 export function Home(){
 
     return(
         <Fragment>
-          <h1>This is Home</h1>  
+            <div className={styles.homebox}>
+                
+              <HeroSection/>
+            </div>
+         
         </Fragment>
         
     )
