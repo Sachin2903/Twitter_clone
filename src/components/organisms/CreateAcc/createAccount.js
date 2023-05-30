@@ -1,9 +1,8 @@
-// import {  useState } from 'react';
-import { Fragment, useLayoutEffect, useState } from 'react';
+
+import { Fragment} from 'react';
 import CreateAcc from './CreateAcc.module.css'
 import { TextField } from '@mui/material';
 import { RxCross2 } from "react-icons/rx";
-import { ClipLoader } from 'react-spinners';
 
 export function CreateAccOfTwitter() {
 
@@ -16,20 +15,7 @@ export function CreateAccOfTwitter() {
         color: 'black',
     }
 
-    const [loading, setLoading] = useState(false)
-
-    useLayoutEffect(() => {
-        setLoading(true)
-        let idloader = setTimeout(() => {
-            setLoading(false)
-        }, 800)
-        return () => {
-            clearTimeout(idloader);
-        }
-
-
-    }, [])
-
+   
     return (
         <Fragment>
             <div className={CreateAcc.createaccountpage}>
@@ -37,17 +23,7 @@ export function CreateAccOfTwitter() {
 
                 <div className={CreateAcc.main_container_create_acc}>
                     <RxCross2 className={CreateAcc.crossbtnaccount} />
-                    {
-                        loading ?
-                            <ClipLoader
-                                className='loader'
-                                color={'#4081ad'}
-                                loading={loading}
-                                size={45}
-                                aria-label="Loading Spinner"
-                                data-testid="loader"
-                            />
-                            :
+                   
                             <div className={CreateAcc.sub_container_acc_new}>
 
                                 <h1>Create your account</h1>
@@ -175,7 +151,7 @@ export function CreateAccOfTwitter() {
                                 </div>
                                 <button className={CreateAcc.btn_create}>Next</button>
                             </div>
-                    }
+                    
                 </div>
             </div>
         </Fragment>
