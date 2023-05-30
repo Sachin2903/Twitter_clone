@@ -1,6 +1,79 @@
-.rightSideBarbox{
-    width: 25%;
+.sidebar {
+    width: 26%;
     height: 100%;
-  
+
     border: 2px solid red;
+    padding: 10px;
+
+    border-radius: 20px;
+
+
+}
+
+.inline {
+    max-width: 400px;
+    margin: auto;
+}
+
+.input_icons {
+    width: 100%;
+    margin-bottom: 10px;
+
+}
+
+ 
+
+.search {
+    position: absolute;
+    margin-top: 8px;
+    margin-left: 20px;
+    font-size: larger;
+    opacity: 0.3;
+     
+    
+ 
+
+}
+
+.input_field {
+    
+    width: 100%;
+    padding: 10px;
+    
+    background-color: #e6ecf0;
+    margin-bottom: 3px;
+    border-radius: 22px;
+    
+  
+    border: none;
+
+}
+
+ 
+.sidebarcontainer {
+    margin-top: 15px;
+    margin-left: 20px;
+    padding: 20px;
+    background-color: #f5f8fa;
+    border-radius: 20px;
+}
+
+.sidebarcontainer h1 {
+    font-size: 15px;
+    font-size: inherit;
+    margin-top: -15px;
+}
+
+.follow {
+    margin-top: 15px;
+    margin-left: 20px;
+    padding: 20px;
+    background-color: #f5f8fa;
+    border-radius: 20px;
+}
+
+.follow h1 {
+    font-size: 15px;
+    font-size: inherit;
+    margin-top: -15px;
 }
