@@ -1,13 +1,10 @@
-.signsignbox{
-    
-      background-color:rgba(91, 112, 131, 0.4) ;
+.signsignbox {
+    background-color: rgba(91, 112, 131, 0.4);
     width: 100vw;
     height: 100vh;
     display: flex;
-    justify-content:center ;
+    justify-content: center;
     align-items: center;
-
-
 }
 
 .main {
@@ -18,7 +15,6 @@
     border-radius: 15px;
     background-color: white;
     font-size: 22px;
-
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -27,12 +23,9 @@
 
 .logos {
     font-size: 15px;
-
-
 }
 
 .firsthead {
-
     display: flex;
     align-items: center;
     justify-content: center;
@@ -50,39 +43,34 @@
 
 .Onelogo {
     color: black;
-    background-color: aliceblue;
+    /* background-color: aliceblue; */
     width: 80%;
-   height: 33px;
-   border:0.1px solid black;
-   padding-top: 4px;
+    height: 33px;
+    border: 0.1px solid rgb(189, 189, 189);
+    padding-top: 4px;
     border-radius: 47px;
-    margin:10px 0px;
+    margin: 10px 0px;
     font-size: 16px;
+    font-weight: bold;
     cursor: pointer;
     display: flex;
     justify-content: center;
     text-decoration: none;
+}
 
+.nocursor {
+    cursor: none;
 }
-.nocursor{
-    cursor:none;
-}
+
 .info {
- 
- width: 85%;
- 
-    
+    width: 85%;
     margin-top: -3rem;
-    
-
-
 }
 
 .haedh5 {
     padding-left: 5rem;
-
-
 }
+
 
 .specialtext {
     color: rgb(34, 97, 233);
@@ -90,22 +78,24 @@
 
 
 @media (width<=717px) {
-    .main{
+    .main {
         padding-top: 50px;
         border-radius: 0;
         width: 100vw;
         height: 100vh;
     }
 }
-.loginredirect{
+
+.loginredirect {
     font-weight: 500;
     text-decoration: none;
     color: rgb(89, 134, 231);
 }
-.crossbtn{
+
+.crossbtn {
     position: absolute;
     left: 13px;
-    top:13px;
+    top: 13px;
     cursor: none;
     font-size: 1em;
 }

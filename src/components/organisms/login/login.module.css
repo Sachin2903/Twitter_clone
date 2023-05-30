@@ -1,4 +1,4 @@
-.loginbox{
+.loginbox {
     position: relative;
     min-width: 540px;
 
@@ -11,13 +11,17 @@
     flex-direction: column;
 
 }
-.logotwitter{
+
+.logotwitter {
     font-size: 28px;
     margin-top: 8px;
     color: rgb(27, 169, 225);
 }
-.btngoogle,.btnnext,.btnapple{
-    height:36px;
+
+.btngoogle,
+.btnnext,
+.btnapple {
+    height: 36px;
     width: 50%;
     border-radius: 44px;
     background-color: white;
@@ -25,56 +29,66 @@
     border: 0.5px solid black;
 
 }
-.btnapple{
+
+.btnapple {
     font-weight: bold;
-    margin:15px;
+    margin: 15px;
 }
-.btnnext{
+
+.btnnext {
     font-weight: bold;
     color: white;
     background-color: black;
 }
-.btngoogle:hover{
+
+.btngoogle:hover {
     background-color: rgba(231, 233, 245, 0.854);
 
 }
-.btnapple:hover{
+
+.btnapple:hover {
     background-color: rgb(235, 234, 234);
 }
-.headtext{
+
+.headtext {
     margin: 15px 0px;
     width: 50%;
 }
-.ortext::before{
-    content: "----------------- ";
+
+.ortext::before {
+    content: "───────────";
 
 }
-.ortext::after{
-    content: " -----------------";
+
+.ortext::after {
+    content: " ───────────";
 
 }
-.ortext{
-    margin-top: -10px;
-    
-}
-.crossbtn{
-   position: absolute;
-   left: 13px;
-   top:13px;
-   cursor: none;
-   font-size: 1.3em;
+
+/* .ortext {
+    margin-top: -5px;
+
+} */
+
+.crossbtn {
+    position: absolute;
+    left: 13px;
+    top: 13px;
+    cursor: none;
+    font-size: 1.3em;
 }
 
 @media (width<=717px) {
-    .loginbox{
+    .loginbox {
         padding-top: 50px;
         border-radius: 0;
         width: 100vw;
         height: 100vh;
     }
-    
+
 }
-.signuptext{
+
+.signuptext {
     text-decoration: none;
     color: rgb(89, 134, 231);
 

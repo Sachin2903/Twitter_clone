@@ -5,12 +5,19 @@
     cursor: none;
     font-size: 1.3em;
 }
-.createaccountpage{
-    background-color:rgba(91, 112, 131, 0.4) ;
+
+.createaccountpage {
+    background-color: rgba(91, 112, 131, 0.4);
     width: 100vw;
     height: 100vh;
     display: flex;
-    justify-content:center ;
+    justify-content: center;
+    align-items: center;
+}
+
+.loader {
+    display: flex;
+    justify-content: center;
     align-items: center;
 }
 
@@ -20,7 +27,9 @@
     min-width: 540px;
     height: 90%;
     position: relative;
-
+    display: flex;
+    align-items: center;
+    justify-content: center;
     border-radius: 15px;
     background-color: rgb(255, 255, 255);
     padding: 10px;
@@ -95,6 +104,7 @@
     cursor: pointer;
     transition: .2s ease-in-out;
 }
+
 @media (width<=717px) {
     .main_container_create_acc {
         padding-top: 50px;
@@ -102,5 +112,5 @@
         width: 100vw;
         height: 100vh;
     }
-    
+
 }

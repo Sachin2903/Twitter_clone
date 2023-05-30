@@ -16,15 +16,15 @@ export function Login() {
                 <h2 className={styles.headtext}>Sign in to Twitter</h2>
                 <button className={styles.btngoogle}><FcGoogle /> Sign in with Google</button>
                 <button className={styles.btnapple}><BsApple /> Sign in with Apple</button>
-                <p className={styles.ortext}> or </p>
+                <p className={styles.ortext}> Or </p>
 
                 <TextField
-                    sx={{ width: "50%" ,margin:"20px 0px" }}
+                    sx={{ width: "50%", margin: "20px 0px" }}
                     label="Phone, email, or username "
                     multiline
 
                 />
-               
+
 
                 <button className={styles.btnnext}>Next</button>
                 <button className={styles.btnapple}>Forgot password?</button>
