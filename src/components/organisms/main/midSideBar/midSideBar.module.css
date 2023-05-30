@@ -1,5 +1,87 @@
 .midsidebarbox {
     width: 46%;
     height: 100%;
-    border: 5px solid red;
+    /* border: 1px solid rgb(215, 215, 215); */
+    overflow: scroll;
+}
+
+.midsidebarbox::-webkit-scrollbar {
+    display: none;
+}
+
+.midsidebarbox h2 {
+    padding: 20px;
+    margin: auto;
+    cursor: pointer;
+}
+
+.subsidebarbox {
+    border: 1px solid rgb(215, 215, 215);
+    background-color: rgba(251, 251, 251, 0.678);
+    position: sticky;
+    backdrop-filter: blur(8.5px);
+    top: 0;
+}
+
+.paragraph_mid_box {
+    display: flex;
+    justify-content: space-around;
+    margin: auto;
+}
+
+.paragraph_mid_box p {
+    padding: 15px 5px;
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+    cursor: pointer;
+    transition: .2s ease-in-out;
+}
+
+.paragraph_mid_box p:hover {
+    background-color: rgba(207, 207, 207, 0.888);
+    transition: .2s ease-in-out;
+}
+
+.input_section_tweet {
+    border: 1px solid rgb(215, 215, 215);
+    height: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.input_section_tweet img {
+    width: 13%;
+    cursor: pointer;
+}
+
+.input_section_tweet input {
+    width: 800px;
+    height: 40%;
+    padding: 15px 15px;
+    border: transparent;
+    font-size: 20px;
+    outline: none;
+}
+
+.tweet_reactions_icons {
+    height: 8%;
+    color: rgb(27, 169, 225);
+    display: flex;
+    align-items: center;
+    gap: 22px;
+    cursor: pointer;
+    padding: 0px 20px;
+}
+
+.tweet_btn {
+    border-radius: 25px;
+    border: transparent;
+    padding: 10px 18px;
+    background-color: rgb(27, 169, 225);
+    color: white;
+    margin-left: 200px;
+    font-weight: bolder;
+    cursor: pointer;
 }
