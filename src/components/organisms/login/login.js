@@ -19,17 +19,12 @@ export function Login() {
                 <p className={styles.ortext}> or </p>
 
                 <TextField
-                    sx={{ width: "50%" }}
-                    label="Phone Number"
+                    sx={{ width: "50%" ,margin:"20px 0px" }}
+                    label="Phone, email, or username "
                     multiline
 
                 />
-                <TextField
-                    sx={{ width: "50%", margin: "15px 0px 15px 0px" }}
-                    label="Password"
-                    multiline
-
-                />
+               
 
                 <button className={styles.btnnext}>Next</button>
                 <button className={styles.btnapple}>Forgot password?</button>
