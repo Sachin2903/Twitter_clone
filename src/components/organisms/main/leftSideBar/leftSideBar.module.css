@@ -1,6 +1,67 @@
 .leftSideBarbox{
     width: 25%;
     height: 100%;
-  
-    border: 2px solid red;
+    display: block;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
 }
+
+
+.twitterLogo{
+    width: 40px;
+}
+
+.button{
+ margin: 0px;
+ border: none;
+ background-color: white;
+ height: 40px;
+ font-size: large;
+ font-weight: 500;
+ display: flex;
+ justify-content: space-between;
+ margin-left: 10px; 
+ word-spacing: 15px;
+}
+
+.button:hover{
+    font-weight: 600;
+    cursor: pointer;
+    .logo{
+        width: 20px;
+    }
+}
+
+.tweet{
+    height: 50px;
+    margin-left: 20px;
+    margin-right: 20px;
+    border-radius: 44px;
+    background-color: rgb(27, 169, 225);
+    font-size: larger;
+    font-weight: bold;
+    transition: 0.3s ease-in-out;
+    color: white;
+    border: transparent;
+   
+}
+
+.tweet:hover{
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+    box-shadow: 2px 2px 4px 2px rgba(0, 0, 0, 0.2);
+    transform: translateY(-4px);
+}
+.imge{
+    width: 60px;
+    border-radius: 50%;
+    margin: 3px;
+    margin-left: 10px;
+}
+.profile{
+  
+    height: 70px;
+    display: flex;
+}
+
