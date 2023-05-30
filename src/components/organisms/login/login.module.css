@@ -1,5 +1,5 @@
 .loginbox{
-    position: relative;
+  
     min-width: 540px;
 
     width: 540px;
@@ -42,6 +42,7 @@
     background-color: rgb(235, 234, 234);
 }
 .headtext{
+    position:relative;
     margin: 15px 0px;
     width: 50%;
 }
@@ -85,13 +86,13 @@
     position: absolute;
     display: none;
     z-index: 9999;
-    bottom: 5px;
+  top:0;
     background-color:rgb(109, 199, 255) ;
     height: 6vh;
     border-radius:6px;
     text-align: center;
     padding:1.5vh 0;
-   word-break:keep-all;
+   word-break:break-all;
     font-family: monospace;
-    width: 65%;
+    width: 100%;
 }

@@ -12,7 +12,7 @@ export function Login() {
     const inputboxalert = useRef("");
 
     
-        const userDetailsToMatch=localStorage.getItem("userDetail");
+      
         
    
 
@@ -20,9 +20,9 @@ export function Login() {
     function checkLoginField() {
         if (inputbox.current.value.trim().length <= 0) {
             inputboxalert.current.style.display = "block";
-            setInterval(() => {
+            setTimeout(() => {
                 inputboxalert.current.style.display = "none";
-            }, 4000)
+            }, 2000)
 
         }else{
            
@@ -35,7 +35,7 @@ export function Login() {
         <Fragment>
 
             <div className={styles.loginbox}>
-                <p ref={inputboxalert} className={styles.alertbox}>Sorry, we could not find your account.</p>
+                
                 <RxCross2 className={styles.crossbtn} />
                 <BsTwitter className={styles.logotwitter} />
                 <h2 className={styles.headtext}>Sign in to Twitter</h2>
@@ -56,7 +56,10 @@ export function Login() {
 
                 <button onClick={checkLoginField} className={styles.btnnext}>Next</button>
                 <button className={styles.btnapple}>Forgot password?</button>
-                <p className={styles.headtext}>Don't have an account?<span style={{ color: "rgb(27, 169, 225)", cursor: "pointer" }}>
+                <p className={styles.headtext}>Don't have an account?
+                <p ref={inputboxalert} className={styles.alertbox}>Sorry, we could not find your account.</p>
+                
+                <span style={{ color: "rgb(27, 169, 225)", cursor: "pointer" }}>
                     <Link className={styles.signuptext} to="/signuppage">Sign up</Link></span></p>
             </div>
 
