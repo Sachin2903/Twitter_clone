@@ -7,7 +7,7 @@ import './App.css';
 import { Routes,Route } from 'react-router-dom';
 import {SignInUp} from "./components/pages/register/register";
 import { Page404 } from "./components/pages/page404/page404";
-
+import {DummyHome} from "./components/pages/dummyHomePage/dummyHome"
 import { TweetBox } from "./components/organisms/main/leftSideBar/tweetBox/tweetbox";
 
 function App() {
@@ -17,6 +17,7 @@ function App() {
         <Route path="/signuppage" element={<Sign/>}/>
         <Route path="/createaccount" element={<CreateAccOfTwitter/>}/>
         <Route path="/home" element={<Home/>}/>
+        <Route path="/dummyHome" element={<DummyHome/>}/>
          <Route path="*" element={<Page404/>}/>
          <Route path="/tweetbox" element={<TweetBox/>}/>
       

@@ -55,8 +55,8 @@ export function Login() {
 
                 <TextField
                     inputRef={inputbox}
-
-                    sx={{ width: "50%", margin: "20px 0px" }}
+                     variant="filled"
+                    sx={{ width: "50%", margin: "20px 0px" ,border:"1px solid blue" }}
                     label="Phone, email, or username "
                     multiline
 
