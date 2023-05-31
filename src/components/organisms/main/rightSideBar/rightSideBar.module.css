@@ -1,8 +1,8 @@
 .sidebar {
     width: 26%;
     height: 100%;
-
-     
+/* 
+    border: 2px solid red; */
     padding: 10px;
 
     border-radius: 20px;
