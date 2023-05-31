@@ -1,0 +1,83 @@
+.errorLoader {
+    top: 0;
+    z-index: 99999999999;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-color: white;
+    display: none;
+}
+
+.twitterLogoError {
+    margin-top: 50vh;
+    margin-left: 45vw;
+    height: 50px;
+    width: 70px;
+}
+
+.main_conatainer_404 {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(137, 137, 137);
+}
+
+.sub_main_conatainer {
+    width: 540px;
+    min-width: 540px;
+    height: 90%;
+    position: relative;
+    background-color: rgb(185, 185, 185);
+    margin: auto;
+    border-radius: 15px;
+}
+
+.sub_main_conatainer_img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+.sub_main_conatainer img {
+    width: 8%;
+    margin: auto;
+}
+
+.error_message_box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: auto;
+    width: 300px;
+    height: 30%;
+    background-color: white;
+    border-radius: 15px;
+    padding: 50px 19px;
+}
+
+.error_message_box p {
+    color: grey;
+    padding: 5px 0px;
+}
+
+.error_404_btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0px;
+}
+
+.error_404_btn button {
+    width: 100%;
+    border: none;
+    background-color: black;
+    color: white;
+    font-weight: bolder;
+    height: 5vh;
+    border-radius: 25px;
+    cursor: pointer;
+}
