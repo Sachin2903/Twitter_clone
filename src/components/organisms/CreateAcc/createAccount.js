@@ -1,5 +1,5 @@
 
-import { Fragment, useRef } from 'react';
+import { Fragment, useRef} from 'react';
 import CreateAcc from './CreateAcc.module.css';
 import { TextField } from '@mui/material';
 import { RxCross2 } from "react-icons/rx";
@@ -8,7 +8,9 @@ import { useNavigate } from 'react-router-dom';
 
 
 
+
 export function CreateAccOfTwitter() {
+ 
     const navigate = useNavigate();
     const regName = useRef("");
     const regPhone = useRef("");
@@ -16,7 +18,7 @@ export function CreateAccOfTwitter() {
     const regMonth = useRef(null);
     const regDate = useRef(null);
     const regYear = useRef(null);
-    const createAccountAlert=useRef("")
+    const createAccountAlert = useRef("")
 
     const regexExpForNumber = /^[6-9][0-9]{9}$/;
     const regexExpForName = /^[a-zA-Z]{4,20}$/;
@@ -32,22 +34,44 @@ export function CreateAccOfTwitter() {
     }
 
     function navigateToLogin() {
+
         if (regexExpForNumber.test(regPhone.current.value) && regexExpForName.test(regName.current.value) && regexExpForEmail.test(regEmail.current.value) && regMonth.current.value.length > 0 && regDate.current.value.length > 0 && regYear.current.value.length > 0) {
-            let dataObj={
-                    Name:regName.current.value,
-                    Phone:regPhone.current.value,
-                    Email:regEmail.current.value,
-                    BOD:`${regDate.current.value} ${regMonth.current.value} ${regYear.current.value}`
+            if (!localStorage.getItem("userData")) {
+                
+                let dataObj = {
+                    Name: regName.current.value,
+                    Phone: regPhone.current.value,
+                    Email: regEmail.current.value,
+                    BOD: `${regDate.current.value} ${regMonth.current.value} ${regYear.current.value}`
+
+                }
+                localStorage.setItem("userData", JSON.stringify([dataObj]))
+                navigate("/");
+            } else {
+
+                let dataObj = {
+                    Name: regName.current.value,
+                    Phone: regPhone.current.value,
+                    Email: regEmail.current.value,
+                    BOD: `${regDate.current.value} ${regMonth.current.value} ${regYear.current.value}`
+
+                }
+
+                let oldDetail=JSON.parse(localStorage.getItem("userData"))
+                localStorage.setItem("userData", JSON.stringify([dataObj,...oldDetail]))
+                navigate("/");
+
+
 
             }
-            localStorage.setItem("userData",JSON.stringify(dataObj))
-            navigate("/");
-        }else{
-            createAccountAlert.current.style.display="block";
-            setTimeout(()=>{
-                createAccountAlert.current.style.display="none";
-            },5000)
-            
+
+
+        } else {
+            createAccountAlert.current.style.display = "block";
+            setTimeout(() => {
+                createAccountAlert.current.style.display = "none";
+            }, 5000)
+
         }
     }
 
@@ -63,7 +87,7 @@ export function CreateAccOfTwitter() {
 
 
                 <div className={CreateAcc.main_container_create_acc}>
-                    <RxCross2 onClick={()=>{navigate("/dummyHome")}} className={CreateAcc.crossbtnaccount} />
+                    <RxCross2 onClick={() => { navigate("/dummyHome") }} className={CreateAcc.crossbtnaccount} />
 
                     <div className={CreateAcc.sub_container_acc_new}>
 
@@ -182,7 +206,7 @@ export function CreateAccOfTwitter() {
 
 
                         </div>
-                         <p className={CreateAcc.invalidalert} ref={createAccountAlert}>Invalid details</p>
+                        <p className={CreateAcc.invalidalert} ref={createAccountAlert}>Invalid details</p>
                         <button onClick={navigateToLogin} className={CreateAcc.btn_create}>Next</button>
                     </div>
 
