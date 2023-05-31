@@ -35,6 +35,7 @@ export function RightSideBar() {
                             <h1>
                                 Who To Follow
                             </h1>
+                            
 
                         </div>
 
