@@ -35,6 +35,8 @@ export function MidSideBar() {
                     <GrLocation />
                     <button className={styles.tweet_btn}>Tweet</button>
                 </div>
+                  
+
             </div>
 
         </Fragment>
