@@ -1,6 +1,7 @@
 import { Fragment } from "react"
 import styles from "./rightSideBar.module.css";
 import { AiOutlineSearch } from 'react-icons/ai'
+import { WhoToFollow } from "../../../molecules/RightSideBarMore/whoToFollow/whoToFollow";
 import { WhatsHapp } from "../../../molecules/RightSideBarMore/whatsHappen/WhatsHapp";
  
  
@@ -35,6 +36,7 @@ export function RightSideBar() {
                             <h1>
                                 Who To Follow
                             </h1>
+                            <WhoToFollow/>
                             
 
                         </div>

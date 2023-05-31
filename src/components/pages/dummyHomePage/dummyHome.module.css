@@ -1,0 +1,143 @@
+.topbox{
+    display: flex;
+    justify-content: space-between;
+    width: 80vw;
+    margin: 0 10vw;
+    height: 90vh;
+}
+.bottombox{
+    width: 100vw;
+    height: 10vh;
+    background-color: #35a7f3;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+.dummybtnlogin{
+   
+    width: 80px;
+    height: 33px;
+    border:0.2px solid white;
+    background-color: transparent;
+    font-weight: bold;
+    border-radius: 44px;
+    transition: 0.2s ease-in-out;
+    cursor: pointer;
+
+}
+.dummybtnsignup{
+    margin-left:10px ;
+    width: 80px;
+    height: 33px;
+    border:0;
+    background-color: white;
+    font-weight: bold;
+    border-radius: 44px;
+    transition: 0.2s ease-in-out;
+    cursor: pointer;
+
+}
+.dummybtnsignup:hover{
+    background-color: rgb(238, 236, 236);
+
+}
+.dummybtnlogin:hover{
+    background-color: rgba(255, 255, 255, 0.265);
+}
+.bottomtextdummy{
+    color:white;
+}
+.dummyLeftSidediv{
+    padding-top: 20px;
+    gap:20px;
+    height: 100%;
+    width: 26%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+
+}
+.dummyRightSidediv{
+    padding:20px;
+    height: 100%;
+    width: 26%;
+
+   
+
+}
+.dummymidSidediv{
+    padding:25px;
+   
+ 
+    height: 100%;
+    width:45%;
+    display: flex;
+    justify-content: space-between;
+}
+.btnGoogleApple{
+    font-size: 0.9em;
+    gap: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:100%;
+    height: 40px;
+    font-weight: 600;
+    background-color: white;
+    border: 0.1px solid black;
+    margin-top: 25px;
+    transition: 0.3s ease-in-out;
+    border-radius: 44px;
+}
+.btnGoogleApple:hover{
+    background-color: rgba(215, 214, 214, 0.47);
+}
+.newtoptext{
+    font-weight: bold;
+}
+.leftdumtext{
+    margin-top: 15px;
+
+}
+.exploreDumtext{
+    font-weight: 700;
+}
+.dumlogo{
+    width: 50px;
+    height: 40px;
+}
+.dummylogoicons{
+    display: flex;
+    flex-direction: column;
+    font-size: 22px;
+    gap:20px;
+   
+    height: 150px;
+    width: 45px;
+}
+@media (width<=1230px) {
+    .dummyRightSidediv{
+        display: none;
+    }
+    .dummymidSidediv{
+        margin-right:26%;
+    }
+    .bottomtextdummy{
+        display: none;
+
+    }
+    
+}
+@media (width<=495px) {
+    .dummymidSidediv{
+        width: 400px;
+       
+        margin-right:26%;
+    }
+    .topbox{
+        width: 100vw;
+    }
+    
+}
