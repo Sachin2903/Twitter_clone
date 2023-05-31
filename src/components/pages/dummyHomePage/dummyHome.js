@@ -4,8 +4,10 @@ import { FcGoogle } from "react-icons/fc";
 import { BsApple } from "react-icons/bs";
 import {FaSearch} from "react-icons/fa"
 import {FiSettings} from "react-icons/fi";
+import { useNavigate } from "react-router-dom";
 import dummylogo from "../../../image/logo/logo.png";
 export function DummyHome() {
+    const navigateOnDummy=useNavigate();
     return (
         <Fragment>
             <div className={styles.topbox}>
@@ -35,12 +37,12 @@ export function DummyHome() {
                 </div>
             </div>
             <div className={styles.bottombox}>
-                <div><h2 className={styles.bottomtextdummy}>Don't miss what's happening</h2>
+                <div className={styles.bottomtextdummy}><h2 className={styles.bottomtextdummy}>Don't miss what's happening</h2>
                     <p className={styles.bottomtextdummy}>People on Twitter are the first to know</p>
                 </div>
                 <div>
-                    <button className={styles.dummybtnlogin}>Login</button>
-                    <button className={styles.dummybtnsignup}>Sign up</button>
+                    <button onClick={()=>{navigateOnDummy("/")}} className={styles.dummybtnlogin}>Login</button>
+                    <button onClick={()=>{navigateOnDummy("/signuppage")}} className={styles.dummybtnsignup}>Sign up</button>
 
                 </div>
 

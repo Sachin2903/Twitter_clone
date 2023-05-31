@@ -63,7 +63,7 @@ export function CreateAccOfTwitter() {
 
 
                 <div className={CreateAcc.main_container_create_acc}>
-                    <RxCross2 className={CreateAcc.crossbtnaccount} />
+                    <RxCross2 onClick={()=>{navigate("/dummyHome")}} className={CreateAcc.crossbtnaccount} />
 
                     <div className={CreateAcc.sub_container_acc_new}>
 

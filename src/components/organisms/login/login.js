@@ -7,9 +7,11 @@ import { RxCross2 } from "react-icons/rx";
 import TextField from '@mui/material/TextField';
 import { Link } from "react-router-dom";
 import { useRef } from "react";
+
 import { useNavigate } from "react-router-dom";
 
 export function Login() {
+    const navigate=useNavigate();
     const navigateToHomeFromlogin = useNavigate();
     const inputbox = useRef("");
     const inputboxalert = useRef("");
@@ -46,7 +48,7 @@ export function Login() {
 
             <div className={styles.loginbox}>
 
-                <RxCross2 className={styles.crossbtn} />
+                <RxCross2 onClick={()=>{navigate("/dummyHome")}} className={styles.crossbtn} />
                 <BsTwitter className={styles.logotwitter} />
                 <h2 className={styles.headtext}>Sign in to Twitter</h2>
                 <button className={styles.btngoogle}><FcGoogle /> Sign in with Google</button>
@@ -55,8 +57,8 @@ export function Login() {
 
                 <TextField
                     inputRef={inputbox}
-                     variant="filled"
-                    sx={{ width: "50%", margin: "20px 0px" ,border:"1px solid blue" }}
+                    
+                    sx={{ width: "50%", margin: "20px 0px"  }}
                     label="Phone, email, or username "
                     multiline
 
