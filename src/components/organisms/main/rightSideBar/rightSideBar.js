@@ -10,27 +10,25 @@ export function RightSideBar() {
         <Fragment>
             <div className={styles.sidebar}>
                 <div className={styles.inline}>
-                    <div className={styles.input_icons}>
-                        <AiOutlineSearch className={styles.search} />
 
-                        <input className={styles.input_field} type="text"
-                        />
-                    </div>
-                    <div className={styles.sidebarcontainer}>
-                        <h1 className={styles.heading}>
-                            What's happening?
-                        </h1>
-                    </div>
-                    <div className={styles.follow}>
-
-                        <h1>
-                            Who To Follow
-                        </h1>
+                    <div className={styles.input_section}>
+                    <AiOutlineSearch className={styles.search} />
+                    <input   type="text"
+                       placeholder="search" />
 
                     </div>
+                        <div className={styles.sidebarcontainer}>
+                            <h1 className={styles.heading}>
+                                What's happening?
+                            </h1>
+                        </div>
+                        <div className={styles.follow}>
 
+                            <h1>
+                                Who To Follow
+                            </h1>
 
-
+                        </div>
 
 
                 </div>
