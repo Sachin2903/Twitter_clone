@@ -11,12 +11,7 @@ export  function WhoToFollow() {
 
 
 const [profiles, setProfiles] = useState([
-    {
-        id:1,
-        img:avatar2,
-        name:"Iron Man",
-        userId:"@ironman",
-    },
+
     {
         id:2,
         img:avatar1,

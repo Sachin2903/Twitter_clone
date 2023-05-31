@@ -6,15 +6,16 @@ import { AiFillApple } from 'react-icons/ai'
 import { Link } from 'react-router-dom';
 import styles from './Sign.module.css';
 import { RxCross2 } from "react-icons/rx";
-
+import { useNavigate } from 'react-router-dom';
 export const Sign = () => {
+  const navigateOnSignUp=useNavigate();
   return (
 
     <Fragment>
       <div className={styles.signsignbox}>
 
         <div className={styles.main}>
-          <RxCross2 className={styles.crossbtn} />
+          <RxCross2 onClick={()=>{navigateOnSignUp("/dummyHome")}} className={styles.crossbtn} />
 
           <div className={styles.firsthead}>
             <FaTwitter className={styles.logo} style={{ color: "rgb(27, 169, 225)" }} />
