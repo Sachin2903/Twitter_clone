@@ -1,0 +1,15 @@
+.errorLoader{
+    top:0;
+    z-index: 99999999999;
+    position:absolute;
+    width:100vw;
+    height: 100vh;
+    background-color: white;
+    display: none;
+}
+.twitterLogoError{
+    margin-top:50vh;
+    margin-left:45vw;
+    height: 50px;
+    width: 70px;
+}
