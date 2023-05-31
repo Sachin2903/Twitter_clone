@@ -1,12 +1,15 @@
 import { Fragment } from "react"
 import styles from "./rightSideBar.module.css";
 import { AiOutlineSearch } from 'react-icons/ai'
-
+import { WhatsHapp } from "../../../molecules/RightSideBarMore/whatsHappen/WhatsHapp";
+ 
+ 
 
 
 
 export function RightSideBar() {
     return (
+    
         <Fragment>
             <div className={styles.sidebar}>
                 <div className={styles.inline}>
@@ -18,9 +21,14 @@ export function RightSideBar() {
 
                     </div>
                         <div className={styles.sidebarcontainer}>
+                       
                             <h1 className={styles.heading}>
                                 What's happening?
                             </h1>
+                            <div>
+                                < WhatsHapp />
+                            </div>
+                           
                         </div>
                         <div className={styles.follow}>
 
