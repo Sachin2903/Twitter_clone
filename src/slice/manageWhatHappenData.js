@@ -12,7 +12,7 @@ export const whatHappenSlice=createSlice({
         },
 
         whatHappenSeeMore:(state,action)=>{
-            console.log('hello');
+            
             state=whathapperdetails;
 
         }
