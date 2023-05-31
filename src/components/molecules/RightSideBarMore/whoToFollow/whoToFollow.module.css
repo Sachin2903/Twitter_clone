@@ -1,0 +1,71 @@
+.container{
+    height: 20vh;
+    position: relative;
+    margin-top: 15px;
+    overflow: scroll; /* Hide the scrollbars */
+  }
+
+.container::-webkit-scrollbar {
+    display: none; /* Hide the scrollbar in WebKit browsers (e.g., Chrome, Safari) */
+  }
+
+.following_container{
+   
+    display: flex;
+    margin-top: 20px;
+    width: 190px;
+    height: 50px;
+}
+
+.imge{
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.name_Id{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.follow_button{
+    margin-top: 15px;
+    margin-left: 5px;
+    position: absolute;
+    right: 10px;
+    border-radius: 30px;
+    width: 60px;
+    height: 30px;
+    font-weight: bold;
+}
+
+.follow_button:hover{
+    cursor: pointer;
+}
+
+.following_button{
+       
+        margin-top: 15px;
+        margin-left: 5px;
+        position: absolute;
+        right: 10px;
+        padding: 2px;
+        border-radius: 30px;
+        width: 75px;
+        height: 30px;
+        font-weight: 550;
+        background-color: black;
+        color: white;
+}
+.following_button:hover{
+    cursor: pointer;
+}
+.seeMore{
+    margin-top: 5px;
+    color: blue;
+    cursor: pointer;
+    
+    
+}
