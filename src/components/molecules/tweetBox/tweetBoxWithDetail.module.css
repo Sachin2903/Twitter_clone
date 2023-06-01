@@ -45,6 +45,58 @@
     width: 50%;
     margin-left: 25%;
 }
+.logo_container{
+    height: 13%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-around;
+}
 
+.logoButton{
+    padding: 10px;
+    height: 80%;
+    width: 75px;
+    display: flex;
+    border-radius: 44px;
+    border: transparent;
+    background-color: white;
+}
+.logo{
+    margin-right: 5px;
+}
 
+.count{
+   font-weight: 500;
+}
+.logoLike{
+    margin-right: 5px;
+    color: rgb(223, 37, 37);
+}
 
+.logoButton:hover{
+    background-color: rgb(225, 222, 218);
+    cursor: pointer;
+    transform: scale(1.08);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+
+}
+
+.logoUpload{
+    height: 80%;
+    width: 75px;
+    display: flex;
+    border-radius: 44px;
+    border: transparent;
+    background-color: white;
+    padding-top: 3px;
+}
+
+.logoUpload:hover{
+    background-color: rgb(225, 222, 218);
+    cursor: pointer;
+    transform: scale(1.08);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
