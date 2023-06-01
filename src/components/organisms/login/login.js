@@ -34,6 +34,7 @@ export function Login() {
                 if(e.Name.toLowerCase()===checkInput||e.Phone.toLowerCase()===checkInput||e.Email.toLowerCase()===checkInput){
                     return true;
                 }
+                return false;
                
                })
               
