@@ -17,7 +17,7 @@ export function Login() {
     const inputboxalert = useRef("");
 
     let userDataFromLocal = JSON.parse(localStorage.getItem("userData"));
-    console.log(userDataFromLocal);
+   
 
 
     function checkLoginField() {
@@ -36,7 +36,7 @@ export function Login() {
                 }
                
                })
-               console.log(test);
+              
 
 
             if (test) {
