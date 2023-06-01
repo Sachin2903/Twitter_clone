@@ -7,7 +7,7 @@ import { CgPoll } from 'react-icons/cg';
 import { BsEmojiSmile } from 'react-icons/bs';
 import { LuCalendarClock } from 'react-icons/lu';
 import { GrLocation } from 'react-icons/gr';
-
+import { TweetBoxWithDetail } from "../../../molecules/tweetBox/tweetBoxWithDetail";
 
 
 export function MidSideBar() {
@@ -35,7 +35,13 @@ export function MidSideBar() {
                     <GrLocation />
                     <button className={styles.tweet_btn}>Tweet</button>
                 </div>
-                  
+                <p className={styles.showtweets210}>show 210 tweets</p>
+                <div className={styles.mainDisplayTweets}>
+
+                    <TweetBoxWithDetail />
+                </div>
+
+
 
             </div>
 
