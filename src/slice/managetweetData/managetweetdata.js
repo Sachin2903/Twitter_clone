@@ -17,6 +17,7 @@ export const tweetSlice = createSlice({
                         e.liketrue="true";
                     }
                 }
+                return e;
 
             })
         }),

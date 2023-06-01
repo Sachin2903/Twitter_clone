@@ -22,7 +22,7 @@ import { BsEmojiSmile } from 'react-icons/bs';
 import { LuCalendarClock } from 'react-icons/lu';
 import { IoLocationSharp } from 'react-icons/io5';
 import { useNavigate } from "react-router-dom";
-import { useDispatch,useSelector } from "react-redux";
+import { useDispatch} from "react-redux";
 import { tweetSlice } from "../../../../slice/managetweetData/managetweetdata";
 
 
@@ -143,8 +143,8 @@ export function LeftSideBar() {
                         <img src={logo123} alt="Not Found" />
                     </div>
                     <div className={styles.name_profile_login_logout}>
-                        <h6>Mahendra Singh Dhoni </h6>
-                        <p>@msdhoni</p>
+                        <h6>dummy </h6>
+                        <p>@dummy123</p>
                         <h4>•••</h4>
                     </div>
                 </div>
