@@ -17,6 +17,7 @@ export function Login() {
     const inputboxalert = useRef("");
 
     let userDataFromLocal = JSON.parse(localStorage.getItem("userData"));
+    console.log(userDataFromLocal);
 
 
     function checkLoginField() {
@@ -27,7 +28,18 @@ export function Login() {
             }, 4000)
 
         } else {
-            if (userDataFromLocal&&(userDataFromLocal.Name===inputbox.current.value.trim()||userDataFromLocal.Phone===inputbox.current.value.trim()||userDataFromLocal.Email===inputbox.current.value.trim())) {
+               let checkInput=(inputbox.current.value.trim()).toLowerCase();
+              
+               let test=userDataFromLocal.find((e)=>{
+                if(e.Name.toLowerCase()===checkInput||e.Phone.toLowerCase()===checkInput||e.Email.toLowerCase()===checkInput){
+                    return true;
+                }
+               
+               })
+               console.log(test);
+
+
+            if (test) {
 
                 navigateToHomeFromlogin("/home")
             }else{
