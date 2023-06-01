@@ -2,7 +2,6 @@
     width: 25%;
     height: 100%;
     display: flex;
-    /* border: 1px solid red; */
     flex-direction: column;
     justify-content: space-around;
 }
@@ -11,27 +10,50 @@
     width: 40px;
 }
 
-.button {
-    margin: 0px;
-    border: none;
+.main_btn_part {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.btn1 {
     width: 195px;
     background-color: transparent;
-    font-size: 18px;
-    font-weight: bold;
     display: flex;
-    padding: 11px 15px;
     border-radius: 35px;
-    word-spacing: 15px;
     text-align: center;
     transition: .1s ease-in-out;
 }
 
-.button:hover {
+.btn1:hover {
     background-color: rgb(231, 231, 231);
     cursor: pointer;
     transition: .1s ease-in-out;
 }
 
+.btn1 button {
+    border: none;
+    background-color: transparent;
+    padding: 0px 12px;
+    font-weight: bold;
+    display: flex;
+    padding: 12px 10px;
+    font-size: 18px;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.btn1 p {
+    border: none;
+    background-color: transparent;
+    padding: 0px 12px;
+    font-weight: bold;
+    display: flex;
+    padding: 15px 15px;
+    font-size: 18px;
+    justify-content: space-around;
+    align-items: center;
+}
 
 .input_tweet_modal {
     display: flex;
@@ -151,4 +173,16 @@ h6 {
 
 .inside_modal_logout button:hover {
     background-color: rgb(243, 243, 243);
+}
+
+
+
+@media screen and (max-width : 900px) {
+    .button p {
+        display: none;
+    }
+
+    .logo {
+        display: block;
+    }
 }

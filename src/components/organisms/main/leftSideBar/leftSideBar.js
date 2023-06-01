@@ -62,14 +62,42 @@ export function LeftSideBar() {
         <Fragment>
             <div className={styles.leftSideBarbox}>
                 <img src={logo} className={styles.twitterLogo} alt="Loading" />
-                <button className={styles.button}> <p><ImHome className={styles.logo} /> Home  </p> </button>
-                <button className={styles.button}> <p><BiHash className={styles.logo} /> Explore  </p> </button>
-                <button className={styles.button}> <p><GrNotification className={styles.logo} /> Notifications  </p></button>
-                <button className={styles.button}> <p><BiEnvelope className={styles.logo} /> Messages  </p> </button>
-                <button className={styles.button}> <p><RiFileListLine className={styles.logo} /> List  </p> </button>
-                <button className={styles.button}> <p><BiBookmark className={styles.logo} /> Bookmarks  </p> </button>
-                <button className={styles.button}> <p><CgProfile className={styles.logo} /> Profile  </p> </button>
-                <button className={styles.button}> <p><CiCircleMore className={styles.logo} /> More  </p> </button>
+
+                <div className={styles.main_btn_part}>
+                    <div className={styles.btn1}>
+                        <p><ImHome /></p>
+                        <button>Home</button>
+                    </div>
+                    <div className={styles.btn1}>
+                        <p><BiHash /></p>
+                        <button>Explore</button>
+                    </div>
+                    <div className={styles.btn1}>
+                        <p><GrNotification /></p>
+                        <button>Notifications</button>
+                    </div>
+                    <div className={styles.btn1}>
+                        <p><BiEnvelope /></p>
+                        <button>Messages</button>
+                    </div>
+                    <div className={styles.btn1}>
+                        <p><RiFileListLine /></p>
+                        <button>List</button>
+                    </div>
+                    <div className={styles.btn1}>
+                        <p><BiBookmark /></p>
+                        <button>Bookmarks</button>
+                    </div>
+                    <div className={styles.btn1}>
+                        <p><CgProfile /></p>
+                        <button>Profile</button>
+                    </div>
+                    <div className={styles.btn1}>
+                        <p><CiCircleMore /></p>
+                        <button>More</button>
+                    </div>
+                </div>
+
 
                 <Button variant="contained" disableElevation onClick={handleOpen}
                     sx={{
