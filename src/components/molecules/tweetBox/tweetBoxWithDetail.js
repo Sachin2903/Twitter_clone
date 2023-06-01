@@ -60,7 +60,7 @@ export function TweetBoxWithDetail(){
 
 function handleLike(index){
     setState(!state)
-
+    state?profiles[index].likesCount= profiles[index].likesCount+1:profiles[index].likesCount= profiles[index].likesCount-1
     console.log(state)
 }
     return(
