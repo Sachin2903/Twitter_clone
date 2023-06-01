@@ -163,17 +163,15 @@ h6 {
     cursor: pointer;
     border: none;
     width: 100%;
-    height: 40px;
-    padding: 8px 8px;
+    height: 30px;
+    padding: 4px 4px;
     background-color: transparent;
     font-weight: bold;
-    border-radius: 45px;
-    font-size: 15px;
+    border-radius: 44px;
+    font-size: 14px;
 }
 
-.inside_modal_logout button:hover {
-    background-color: rgb(243, 243, 243);
-}
+
 
 
 
@@ -189,6 +187,29 @@ h6 {
 
 @media screen and (max-width : 1000px) {
     .btn1 button {
+        display: none;
+    }
+    .btn1{
+        width:50px;
+        margin-left: 80px;
+    }
+    .sub_account_login{
+        display: none;
+    }
+    .name_profile_login_logout  h6{
+        display: none;
+    }
+    .name_profile_login_logout p{
+        display: none;
+    }
+    .account_login{
+        width: 40px;
+        margin-left: 85px;
+    }
+    .leftSideBarbox{
+        width: 0px;
+    }
+    .Tweetbutton{
         display: none;
     }
 }
