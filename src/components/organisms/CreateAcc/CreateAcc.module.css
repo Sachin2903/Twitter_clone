@@ -111,13 +111,13 @@
     display: none;
     z-index: 9999;
     top: 0;
-    right: 0;
+    left: 0;
     background-color: rgb(109, 199, 255);
     height: 5vh;
-    border-top-left-radius: 44px;
-    border-bottom-left-radius: 44px;
+    border-top-right-radius: 44px;
+    border-bottom-right-radius: 44px;
     font-weight: bold;
-    padding:1%;
+    padding:1.5%;
  
     font-family: monospace;
     width: 50%;

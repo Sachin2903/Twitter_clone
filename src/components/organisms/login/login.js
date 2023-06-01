@@ -16,7 +16,7 @@ export function Login() {
     const inputbox = useRef("");
     const inputboxalert = useRef("");
 
-    let userDataFromLocal = JSON.parse(localStorage.getItem("userData"));
+    let userDataFromLocal = JSON.parse(localStorage.getItem("userDataByGroup3"));
 
 
 
@@ -29,17 +29,18 @@ export function Login() {
 
         } else {
             let checkInput = (inputbox.current.value.trim()).toLowerCase();
-            let test=0;
-            if(userDataFromLocal){   
-             test = userDataFromLocal.find((e) => {
-                if (e.Name.toLowerCase() === checkInput || e.Phone.toLowerCase() === checkInput || e.Email.toLowerCase() === checkInput) {
-                    return true;
-                }
-                return false;
-              })
+            let test = 0;
+            if (userDataFromLocal) {
+                test = userDataFromLocal.find((e) => {
+                    if (e.Name.toLowerCase() === checkInput || e.Phone.toLowerCase() === checkInput || e.Email.toLowerCase() === checkInput) {
+                        localStorage.setItem("userNameByGroup3",e.Name.toLowerCase())
+                        return true;
+                    }
+                    return false;
+                })
             }
-              if (test) {
-                 navigateToHomeFromlogin("/home")
+            if (test) {
+                navigateToHomeFromlogin("/home")
             }
             else {
                 inputboxalert.current.style.display = "block";
@@ -47,8 +48,8 @@ export function Login() {
                     inputboxalert.current.style.display = "none";
                 }, 2000)
             }
-    }//else end top
-}
+        }//else end top
+    }
 
     return (
         <Fragment>

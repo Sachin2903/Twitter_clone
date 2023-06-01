@@ -22,7 +22,7 @@ export function CreateAccOfTwitter() {
 
     const regexExpForNumber = /^[6-9][0-9]{9}$/;
     const regexExpForName = /^[a-zA-Z]{4,20}$/;
-    const regexExpForEmail = /^[a-zA-Z0-9]{5,}(@gmail.com|@email.com)$/;
+    const regexExpForEmail = /^[a-zA-Z0-9]{3,}(@gmail.com|@email.com)$/;
 
     const textFieldStyles = {
         marginTop: '20px',
@@ -36,7 +36,7 @@ export function CreateAccOfTwitter() {
     function navigateToLogin() {
 
         if (regexExpForNumber.test(regPhone.current.value) && regexExpForName.test(regName.current.value) && regexExpForEmail.test(regEmail.current.value) && regMonth.current.value.length > 0 && regDate.current.value.length > 0 && regYear.current.value.length > 0) {
-            if (!localStorage.getItem("userData")) {
+            if (!(localStorage.getItem("userDataByGroup3"))) {
                 
                 let dataObj = {
                     Name: regName.current.value,
@@ -45,9 +45,10 @@ export function CreateAccOfTwitter() {
                     BOD: `${regDate.current.value} ${regMonth.current.value} ${regYear.current.value}`
 
                 }
-                localStorage.setItem("userData", JSON.stringify([dataObj]))
+                localStorage.setItem("userDataByGroup3", JSON.stringify([dataObj]))
                 navigate("/");
             } else {
+                let oldDetail=JSON.parse(localStorage.getItem("userDataByGroup3"));
 
                 let dataObj = {
                     Name: regName.current.value,
@@ -57,8 +58,8 @@ export function CreateAccOfTwitter() {
 
                 }
 
-                let oldDetail=JSON.parse(localStorage.getItem("userData"))
-                localStorage.setItem("userData", JSON.stringify([dataObj,...oldDetail]))
+                
+                localStorage.setItem("userDataByGroup3", JSON.stringify([dataObj,...oldDetail]))
                 navigate("/");
 
 

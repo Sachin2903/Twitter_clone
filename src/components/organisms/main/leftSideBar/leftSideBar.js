@@ -27,8 +27,18 @@ import { tweetSlice } from "../../../../slice/managetweetData/managetweetdata";
 
 
 export function LeftSideBar() {
+    let namelocal;
     const dispatchForTweet=useDispatch();
     const tweetRefleft=useRef();
+
+    try{
+        namelocal=localStorage.getItem("userNameByGroup3");
+
+
+    }catch{
+        namelocal="dummy"
+
+    }
 
     function addTweetfunOnLeft(){
         if(tweetRefleft.current.value.length>0){
@@ -171,8 +181,8 @@ export function LeftSideBar() {
                         <img src={logo123} alt="Not Found" />
                     </div>
                     <div className={styles.name_profile_login_logout}>
-                        <h6>dummy </h6>
-                        <p>@dummy123</p>
+                        <h6>{namelocal} </h6>
+                        <p>@{namelocal}123</p>
                         <h4>•••</h4>
                     </div>
                 </div>
