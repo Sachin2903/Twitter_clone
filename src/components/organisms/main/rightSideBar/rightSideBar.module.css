@@ -1,7 +1,7 @@
 .sidebar {
     width: 26%;
     height: 100%;
-/* 
+    /* 
     border: 2px solid red; */
     padding: 10px;
 
@@ -14,7 +14,8 @@
     max-width: 400px;
     margin: auto;
 }
-.input_section{
+
+.input_section {
     border: 1px solid rgb(215, 215, 215);
     height: 10%;
     display: flex;
@@ -22,16 +23,18 @@
     align-items: center;
     border-radius: 12px;
     background-color: #f5f8fa;
- 
-    
+
+
 }
-.input_section .search{
+
+.input_section .search {
     width: 13%;
     cursor: pointer;
     font-size: 21px;
     color: rgb(27, 169, 225);
 }
- .input_section input {
+
+.input_section input {
     background-color: #f5f8fa;
     height: 40%;
     padding: 10px 16px;
@@ -39,9 +42,9 @@
     font-size: 15px;
     outline: none;
 }
- 
 
- 
+
+
 .sidebarcontainer {
     margin-top: 15px;
     margin-left: 20px;

@@ -186,3 +186,9 @@ h6 {
         display: block;
     }
 }
+
+@media screen and (max-width : 1000px) {
+    .btn1 button {
+        display: none;
+    }
+}
