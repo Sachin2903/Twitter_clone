@@ -116,20 +116,21 @@ export function LeftSideBar() {
                     </div>
                 </div>
 
-
+                <div className={styles.Tweetbutton}>
                 <Button variant="contained" disableElevation onClick={handleOpen}
                     sx={{
                         borderRadius: '45px',
                         height: '45px',
-                        width: '75%',
+                        width: '60%',
                         boxShadow: 'none',
                         textTransform: 'unset',
-                        fontSize: '16px',
+                        fontSize: '14px',
                         backgroundColor: 'rgb(27, 169, 225)',
-                        "&:hover": { backgroundColor: 'rgb(27, 169, 225)' }
+                        "&:hover": { backgroundColor: 'rgb(27, 169, 225)',
+                     }
                     }}
                 >Tweet</Button>
-
+                </div>
                 <Modal
                     open={forModals}
                     onClose={handleClose}
@@ -184,20 +185,18 @@ export function LeftSideBar() {
                     <Box sx={{
                         position: 'absolute',
                         top: '82%',
-                        left: '19%',
-                        transform: 'translate(-50%, -50%)',
-                        width: '350px',
-                        minWidth: '250px',
-                        height: '13%',
+                        left: '25%',
+                        width: '200px',
+                        minWidth: '150px',
+                        height: '7%',
                         backgroundColor: 'white',
                         borderRadius: '15px',
                         border: 'none',
-                        padding: '0px 5px',
+                        padding: '0px 1px',
 
                     }}>
                         <div className={styles.inside_modal_logout}>
-                            <button>Add an existing account</button>
-                            <button onClick={navigateToLoginPage}>Logout @msdhoni</button>
+                            <button onClick={navigateToLoginPage}>Logout @dummy</button>
                         </div>
                     </Box>
                 </Modal>
