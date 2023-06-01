@@ -207,7 +207,7 @@ export function LeftSideBar() {
                     }}>
                         <div className={styles.inside_modal_logout}>
                             <button>Add an existing account</button>
-                            <button onClick={navigateToLoginPage}>Logout @msdhoni</button>
+                            <button onClick={navigateToLoginPage}>Logout @{namelocal}</button>
                         </div>
                     </Box>
                 </Modal>
