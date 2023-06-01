@@ -1,4 +1,4 @@
-import { Fragment } from "react";
+import { Fragment ,useEffect} from "react";
 import styles from "./dummyHome.module.css";
 import { FcGoogle } from "react-icons/fc";
 import { BsApple } from "react-icons/bs";
@@ -6,8 +6,31 @@ import {FaSearch} from "react-icons/fa"
 import {FiSettings} from "react-icons/fi";
 import { useNavigate } from "react-router-dom";
 import dummylogo from "../../../image/logo/logo.png";
+import { useSelector } from "react-redux";
 export function DummyHome() {
     const navigateOnDummy=useNavigate();
+
+    const chekdummy=useSelector((state,action)=>{
+        return state.checkBox
+    })
+
+    
+    useEffect(()=>{
+   
+        if(!chekdummy){
+            navigateOnDummy("/home");
+     
+        }
+     
+        })
+
+
+
+
+
+
+
+
     return (
         <Fragment>
             <div className={styles.topbox}>

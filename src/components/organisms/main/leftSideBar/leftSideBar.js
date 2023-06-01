@@ -25,6 +25,7 @@ import { useNavigate } from "react-router-dom";
 import { useDispatch} from "react-redux";
 import { tweetSlice } from "../../../../slice/managetweetData/managetweetdata";
 
+import {protectSliceToCheck} from "../../../../slice/protectCheck/protectSlice"
 
 export function LeftSideBar() {
     let namelocal;
@@ -81,6 +82,8 @@ export function LeftSideBar() {
     const navigateToLoginPageFromProfile = useNavigate()
 
     function navigateToLoginPage() {
+        dispatchForTweet(protectSliceToCheck.actions.changecheck())
+
         navigateToLoginPageFromProfile('/')
     }
 
@@ -206,8 +209,8 @@ export function LeftSideBar() {
 
                     }}>
                         <div className={styles.inside_modal_logout}>
-                            <button>Add an existing account</button>
-                            <button onClick={navigateToLoginPage}>Logout @msdhoni</button>
+                            
+                            <button onClick={navigateToLoginPage}>Logout @{namelocal}</button>
                         </div>
                     </Box>
                 </Modal>

@@ -1,9 +1,16 @@
 .herosectionbox{
-    margin: 0 10%;
-    width: 1000px;
-    height: 100%;
+   
+    margin:0 10vw;
+    width:80vw;
+    height: 100vh;
     display: flex;
     justify-content: space-between;
    
 }
-
+@media (width<1111px) {
+    .herosectionbox{
+        width: 100vw;
+        justify-content: center;
+    }
+    
+}

@@ -1,4 +1,5 @@
 .leftSideBarbox {
+  
     width: 25%;
     height: 100%;
     display: flex;
@@ -171,45 +172,3 @@ h6 {
     font-size: 14px;
 }
 
-
-
-
-
-@media screen and (max-width : 900px) {
-    .button p {
-        display: none;
-    }
-
-    .logo {
-        display: block;
-    }
-}
-
-@media screen and (max-width : 1000px) {
-    .btn1 button {
-        display: none;
-    }
-    .btn1{
-        width:50px;
-        margin-left: 80px;
-    }
-    .sub_account_login{
-        display: none;
-    }
-    .name_profile_login_logout  h6{
-        display: none;
-    }
-    .name_profile_login_logout p{
-        display: none;
-    }
-    .account_login{
-        width: 40px;
-        margin-left: 85px;
-    }
-    .leftSideBarbox{
-        width: 0px;
-    }
-    .Tweetbutton{
-        display: none;
-    }
-}

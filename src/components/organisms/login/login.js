@@ -1,4 +1,4 @@
-import { Fragment } from "react";
+import { Fragment, useEffect} from "react";
 import styles from "./login.module.css";
 import { BsTwitter } from "react-icons/bs";
 import { FcGoogle } from "react-icons/fc"
@@ -7,14 +7,34 @@ import { RxCross2 } from "react-icons/rx";
 import TextField from '@mui/material/TextField';
 import { Link } from "react-router-dom";
 import { useRef } from "react";
-
+import { useSelector,useDispatch } from "react-redux";
+import { protectSliceToCheck} from "../../../slice/protectCheck/protectSlice";
 import { useNavigate } from "react-router-dom";
 
 export function Login() {
+    
+    const disToToggle=useDispatch();
     const navigate = useNavigate();
     const navigateToHomeFromlogin = useNavigate();
     const inputbox = useRef("");
     const inputboxalert = useRef("");
+
+    const chek=useSelector((state,action)=>{
+        return state.checkBox
+    })
+
+   useEffect(()=>{
+   
+   if(!chek){
+    navigateToHomeFromlogin("/home");
+
+   }
+
+   })
+
+
+
+
 
     let userDataFromLocal = JSON.parse(localStorage.getItem("userDataByGroup3"));
 
@@ -40,6 +60,7 @@ export function Login() {
                 })
             }
             if (test) {
+                disToToggle(protectSliceToCheck.actions.changecheck())
                 navigateToHomeFromlogin("/home")
             }
             else {

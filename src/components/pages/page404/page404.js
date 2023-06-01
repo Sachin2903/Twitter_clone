@@ -37,7 +37,7 @@ export function Page404() {
                         <h3>Error</h3>
                         <p>Oops,something went wrong  , Please try again later .</p>
                         <div className={styles.error_404_btn}>
-                            <button onClick={()=>naviagteFrom404("/")}>OK</button>
+                            <button onClick={()=>naviagteFrom404("/home")}>OK</button>
                         </div>
                     </div>
                 </div>

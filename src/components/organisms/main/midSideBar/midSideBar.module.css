@@ -1,7 +1,7 @@
 .midsidebarbox {
-    width: 46%;
+    width: 500px;
     height: 100%;
-    /* border: 1px solid rgb(215, 215, 215); */
+ 
     overflow: scroll;
 }
 
