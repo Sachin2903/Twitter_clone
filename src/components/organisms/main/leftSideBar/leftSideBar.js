@@ -21,12 +21,14 @@ import { CgPoll } from 'react-icons/cg';
 import { BsEmojiSmile } from 'react-icons/bs';
 import { LuCalendarClock } from 'react-icons/lu';
 import { IoLocationSharp } from 'react-icons/io5';
+import { useNavigate } from "react-router-dom";
 
 
 
 export function LeftSideBar() {
 
     const [forModals, setForModals] = useState(false)
+    const [forLogOut, setForLogOut] = useState(false)
 
     function handleOpen() {
         setForModals(true)
@@ -35,6 +37,26 @@ export function LeftSideBar() {
     function handleClose() {
         setForModals(false)
     }
+
+    // ..........................................logout section
+
+    function handleOpenLogOut() {
+        setForLogOut(true)
+    }
+
+    function handleCloseLogOut() {
+        setForLogOut(false)
+    }
+
+    // navigation ..............................................
+
+    const navigateToLoginPageFromProfile = useNavigate()
+
+    function navigateToLoginPage() {
+        navigateToLoginPageFromProfile('/')
+    }
+
+
 
     return (
         <Fragment>
@@ -95,11 +117,50 @@ export function LeftSideBar() {
                     </Box>
                 </Modal>
 
-                <div className={styles.profile}>
-                    <img className={styles.imge} src={logo123} alt="avater" />
-                    <div> <h3>Tony Stark</h3>  @tony stark </div>
+                {/* ...................................................................................... */}
+
+
+                <div className={styles.account_login} onClick={handleOpenLogOut}>
+                    <div className={styles.sub_account_login}>
+                        <img src={logo123} alt="Not Found" />
+                    </div>
+                    <div className={styles.name_profile_login_logout}>
+                        <h6>Mahendra Singh Dhoni </h6>
+                        <p>@msdhoni</p>
+                        <h4>•••</h4>
+                    </div>
                 </div>
+                <Modal
+                    open={forLogOut}
+                    onClose={handleCloseLogOut}
+                    aria-labelledby="modal-modal-title"
+                    aria-describedby="modal-modal-description">
+                    <Box sx={{
+                        position: 'absolute',
+                        top: '82%',
+                        left: '19%',
+                        transform: 'translate(-50%, -50%)',
+                        width: '350px',
+                        minWidth: '250px',
+                        height: '13%',
+                        backgroundColor: 'white',
+                        borderRadius: '15px',
+                        border: 'none',
+                        padding: '0px 5px',
+
+                    }}>
+                        <div className={styles.inside_modal_logout}>
+                            <button>Add an existing account</button>
+                            <button onClick={navigateToLoginPage}>Logout @msdhoni</button>
+                        </div>
+                    </Box>
+                </Modal>
+
+
+
             </div>
         </Fragment>
+
     )
 }
+

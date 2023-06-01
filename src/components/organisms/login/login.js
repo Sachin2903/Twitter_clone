@@ -11,13 +11,13 @@ import { useRef } from "react";
 import { useNavigate } from "react-router-dom";
 
 export function Login() {
-    const navigate=useNavigate();
+    const navigate = useNavigate();
     const navigateToHomeFromlogin = useNavigate();
     const inputbox = useRef("");
     const inputboxalert = useRef("");
 
     let userDataFromLocal = JSON.parse(localStorage.getItem("userData"));
-   
+
 
 
     function checkLoginField() {
@@ -28,22 +28,21 @@ export function Login() {
             }, 4000)
 
         } else {
-               let checkInput=(inputbox.current.value.trim()).toLowerCase();
-              
-               let test=userDataFromLocal.find((e)=>{
-                if(e.Name.toLowerCase()===checkInput||e.Phone.toLowerCase()===checkInput||e.Email.toLowerCase()===checkInput){
+            let checkInput = (inputbox.current.value.trim()).toLowerCase();
+
+            let test = userDataFromLocal.find((e) => {
+                if (e.Name.toLowerCase() === checkInput || e.Phone.toLowerCase() === checkInput || e.Email.toLowerCase() === checkInput) {
                     return true;
                 }
                 return false;
-               
-               })
-              
 
+            })
 
             if (test) {
 
                 navigateToHomeFromlogin("/home")
-            }else{
+            }
+            else {
                 inputboxalert.current.style.display = "block";
                 setTimeout(() => {
                     inputboxalert.current.style.display = "none";
@@ -51,7 +50,7 @@ export function Login() {
             }
 
 
-        }
+        }//else end top
 
 
     }
@@ -61,7 +60,7 @@ export function Login() {
 
             <div className={styles.loginbox}>
 
-                <RxCross2 onClick={()=>{navigate("/dummyHome")}} className={styles.crossbtn} />
+                <RxCross2 onClick={() => { navigate("/dummyHome") }} className={styles.crossbtn} />
                 <BsTwitter className={styles.logotwitter} />
                 <h2 className={styles.headtext}>Sign in to Twitter</h2>
                 <button className={styles.btngoogle}><FcGoogle /> Sign in with Google</button>
@@ -70,8 +69,8 @@ export function Login() {
 
                 <TextField
                     inputRef={inputbox}
-                    
-                    sx={{ width: "50%", margin: "20px 0px"  }}
+
+                    sx={{ width: "50%", margin: "20px 0px" }}
                     label="Phone, email, or username "
                     multiline
 
