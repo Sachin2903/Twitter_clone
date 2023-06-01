@@ -1,8 +1,9 @@
 import { Fragment, useLayoutEffect, useRef } from "react";
 import styles from "./page404.module.css"
 import twitterLogoFor404 from "../../../image/logo/logo.png"
-
+import { useNavigate } from "react-router-dom";
 export function Page404() {
+    const naviagteFrom404=useNavigate();
     const loaderFor404 = useRef("");
 
     useLayoutEffect(() => {
@@ -36,7 +37,7 @@ export function Page404() {
                         <h3>Error</h3>
                         <p>Oops,something went wrong  , Please try again later .</p>
                         <div className={styles.error_404_btn}>
-                            <button>OK</button>
+                            <button onClick={()=>naviagteFrom404("/")}>OK</button>
                         </div>
                     </div>
                 </div>

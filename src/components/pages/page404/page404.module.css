@@ -25,11 +25,11 @@
 }
 
 .sub_main_conatainer {
-    width: 540px;
-    min-width: 540px;
+    width: 70vh;
+ 
     height: 90%;
     position: relative;
-    background-color: rgb(185, 185, 185);
+    background-color: rgb(205, 203, 203);
     margin: auto;
     border-radius: 15px;
 }
@@ -42,7 +42,7 @@
 }
 
 .sub_main_conatainer img {
-    width: 8%;
+    width: 55px;
     margin: auto;
 }
 
@@ -80,4 +80,14 @@
     height: 5vh;
     border-radius: 25px;
     cursor: pointer;
+}
+.error_404_btn button:hover{
+    background-color: rgb(188, 188, 188);
+    color:black;
+}
+@media (width<=777px) {
+    .sub_main_conatainer  {
+        width:100vw;
+        height: 100vh;
+    }
 }

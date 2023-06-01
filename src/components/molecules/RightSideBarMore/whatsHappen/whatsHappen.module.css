@@ -26,24 +26,23 @@
 .show_more {
     border: none;
     font-size: 16px;
-    margin-left: 12px;
+    margin-top: 10px;
+    margin-left: 1px;
     cursor: pointer;
+    background-color: transparent;
     color: #03a9f4;
 }
 
 .popup {
     position: absolute;
     top: 100%;
-    left: -40%;
+    left: -5%;
     height: 55px;
-    
-
-    width: 113%;
-    min-width: 132%;
-
-    padding: 10px;
+    width: 90%;
+    min-width: 90%;
+    padding: 2px;
+  
     background-color: #ffffff;
-    border: 1px solid #ccc;
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     z-index: 999;
@@ -53,6 +52,7 @@
     animation-duration: 0.3s;
     animation-fill-mode: forwards;
     cursor: pointer;
+    
 }
 
 .popup:hover {
@@ -63,15 +63,16 @@
 }
 
 .popupdata {
+    
     display: flex;
     flex-direction: column;
-    margin-top: -21px;
-  
+    margin-top: -38px;
+ 
     align-items: center;
     gap: 12px;
     font-size: 15px;
     margin-left: 35px;
-     
+     height: 100%;
     justify-content: space-evenly;
     
 }
