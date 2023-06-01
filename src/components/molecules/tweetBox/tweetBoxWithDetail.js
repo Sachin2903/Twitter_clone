@@ -45,7 +45,7 @@ function handleLike(index){
                     <button className={styles.logoButton}><FaRegComment className={styles.logo} size={17}/> <p className={styles.count}>234</p></button>
                     <button className={styles.logoButton}><ImLoop className={styles.logo} size={17}/> <p className={styles.count}>234</p></button>
 
-                    <button className={styles.logoButton} onClick={()=>handleLike(index)}>{(data.liketrue==="true")?<FcLike className={styles.logo} size={17}/>:<AiOutlineHeart className={styles.logoLike} size={17} />} <p className={styles.count}>{data.likesCount}</p></button>
+                    <button className={styles.logoButton} onClick={()=>handleLike(index)}>{(data.liketrue==="true")?<AiOutlineHeart className={styles.logoLike} size={17} />:<FcLike className={styles.logo} size={17}/>} <p className={styles.count}>{data.likesCount}</p></button>
 
                     <button className={styles.logoButton}><GiHistogram className={styles.logo} size={17}/> <p className={styles.count}>234</p></button>
                     <button className={styles.logoUpload}><BiUpload className={styles.logoUpload} size={15}/> </button>
