@@ -85,3 +85,21 @@
     font-weight: bolder;
     cursor: pointer;
 }
+.mainDisplayTweets{
+    border:2px solid black;
+    width:100%;
+    height: 100%;
+    overflow: scroll;
+    
+}
+
+.mainDisplayTweets::-webkit-scrollbar{
+    display: none;
+}
+.showtweets210{
+    margin-bottom: 5px;
+    color:rgb(27, 169, 225);
+    width: 100%;
+    text-align: center;
+
+}
