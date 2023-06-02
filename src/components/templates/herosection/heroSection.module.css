@@ -9,7 +9,7 @@
 }
 @media (width<1111px) {
     .herosectionbox{
-        width: 100vw;
+        width:100vw;
         justify-content: center;
     }
     
