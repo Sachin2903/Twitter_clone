@@ -1,5 +1,5 @@
 .leftSideBarbox {
-  
+
     width: 25%;
     height: 100%;
     display: flex;
@@ -172,3 +172,17 @@ h6 {
     font-size: 14px;
 }
 
+@media screen and (max-width : 700px) {
+    .btn1 button {
+        display: none;
+    }
+
+    .sub_account_login img {
+        display: none;
+    }
+
+    .name_profile_login_logout h6,
+    p {
+        display: none;
+    }
+}

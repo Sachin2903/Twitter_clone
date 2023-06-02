@@ -1,12 +1,12 @@
 import { Fragment, useRef } from "react"
 import styles from "./midSideBar.module.css";
 import tweetdemo from '../../../../image/logo/836-removebg-preview.png'
-import { GrGallery } from 'react-icons/gr';
+import { MdPhotoSizeSelectActual } from 'react-icons/md';
 import { BsFiletypeGif } from 'react-icons/bs';
 import { CgPoll } from 'react-icons/cg';
 import { BsEmojiSmile } from 'react-icons/bs';
 import { LuCalendarClock } from 'react-icons/lu';
-import { GrLocation } from 'react-icons/gr';
+import { IoLocationSharp } from 'react-icons/io5';
 import { TweetBoxWithDetail } from "../../../molecules/tweetBox/tweetBoxWithDetail";
 import { useDispatch } from "react-redux";
 import { tweetSlice } from "../../../../slice/managetweetData/managetweetdata"
@@ -47,15 +47,15 @@ export function MidSideBar() {
                 </div>
 
                 <div className={styles.tweet_reactions_icons}>
-                    <GrGallery className={styles.icons_ready} />
+                    <MdPhotoSizeSelectActual className={styles.icons_ready} />
                     <BsFiletypeGif className={styles.icons_ready} />
                     <CgPoll className={styles.icons_ready} />
                     <BsEmojiSmile className={styles.icons_ready} />
                     <LuCalendarClock className={styles.icons_ready} />
-                    <GrLocation className={styles.icons_ready} />
+                    <IoLocationSharp className={styles.icons_ready} />
                     <button onClick={addTweetfun} className={styles.tweet_btn}>Tweet</button>
                 </div>
-                <p className={styles.showtweets210}>show 210 tweets</p>
+                <p className={styles.showtweets210}>Show 210 Tweets</p>
                 <div className={styles.mainDisplayTweets}>
 
                     <TweetBoxWithDetail />
