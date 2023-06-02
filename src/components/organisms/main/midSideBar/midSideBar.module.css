@@ -1,7 +1,7 @@
 .midsidebarbox {
-    width: 46%;
+    width: 500px;
     height: 100%;
-    /* border: 1px solid rgb(215, 215, 215); */
+
     overflow: scroll;
 }
 
@@ -66,13 +66,17 @@
 }
 
 .tweet_reactions_icons {
-    height: 8%;
+    height: 10%;
     color: rgb(27, 169, 225);
     display: flex;
     align-items: center;
     gap: 22px;
     cursor: pointer;
     padding: 0px 20px;
+}
+
+.icons_ready {
+    font-size: 52px;
 }
 
 .tweet_btn {
@@ -85,20 +89,22 @@
     font-weight: bolder;
     cursor: pointer;
 }
-.mainDisplayTweets{
 
-    width:100%;
+.mainDisplayTweets {
+
+    width: 100%;
     height: 100%;
     overflow: scroll;
-    
+
 }
 
-.mainDisplayTweets::-webkit-scrollbar{
+.mainDisplayTweets::-webkit-scrollbar {
     display: none;
 }
-.showtweets210{
+
+.showtweets210 {
     margin-bottom: 5px;
-    color:rgb(27, 169, 225);
+    color: rgb(27, 169, 225);
     width: 100%;
     text-align: center;
 

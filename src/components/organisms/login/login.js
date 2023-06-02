@@ -1,4 +1,4 @@
-import { Fragment } from "react";
+import { Fragment, useEffect} from "react";
 import styles from "./login.module.css";
 import { BsTwitter } from "react-icons/bs";
 import { FcGoogle } from "react-icons/fc"
@@ -7,16 +7,36 @@ import { RxCross2 } from "react-icons/rx";
 import TextField from '@mui/material/TextField';
 import { Link } from "react-router-dom";
 import { useRef } from "react";
-
+import { useSelector,useDispatch } from "react-redux";
+import { protectSliceToCheck} from "../../../slice/protectCheck/protectSlice";
 import { useNavigate } from "react-router-dom";
 
 export function Login() {
+    
+    const disToToggle=useDispatch();
     const navigate = useNavigate();
     const navigateToHomeFromlogin = useNavigate();
     const inputbox = useRef("");
     const inputboxalert = useRef("");
 
-    let userDataFromLocal = JSON.parse(localStorage.getItem("userData"));
+    const chek=useSelector((state,action)=>{
+        return state.checkBox
+    })
+
+   useEffect(()=>{
+   
+   if(!chek){
+    navigateToHomeFromlogin("/home");
+
+   }
+
+   })
+
+
+
+
+
+    let userDataFromLocal = JSON.parse(localStorage.getItem("userDataByGroup3"));
 
 
 
@@ -29,17 +49,19 @@ export function Login() {
 
         } else {
             let checkInput = (inputbox.current.value.trim()).toLowerCase();
-            let test=0;
-            if(userDataFromLocal){   
-             test = userDataFromLocal.find((e) => {
-                if (e.Name.toLowerCase() === checkInput || e.Phone.toLowerCase() === checkInput || e.Email.toLowerCase() === checkInput) {
-                    return true;
-                }
-                return false;
-              })
+            let test = 0;
+            if (userDataFromLocal) {
+                test = userDataFromLocal.find((e) => {
+                    if (e.Name.toLowerCase() === checkInput || e.Phone.toLowerCase() === checkInput || e.Email.toLowerCase() === checkInput) {
+                        localStorage.setItem("userNameByGroup3",e.Name.toLowerCase())
+                        return true;
+                    }
+                    return false;
+                })
             }
-              if (test) {
-                 navigateToHomeFromlogin("/home")
+            if (test) {
+                disToToggle(protectSliceToCheck.actions.changecheck())
+                navigateToHomeFromlogin("/home")
             }
             else {
                 inputboxalert.current.style.display = "block";
@@ -47,8 +69,8 @@ export function Login() {
                     inputboxalert.current.style.display = "none";
                 }, 2000)
             }
-    }//else end top
-}
+        }//else end top
+    }
 
     return (
         <Fragment>

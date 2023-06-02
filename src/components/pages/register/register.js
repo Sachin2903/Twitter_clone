@@ -22,14 +22,15 @@ export function SignInUp(){
 
    return (
       <Fragment>
-         <div className={styles.mainbox}>
-        <Login/>
-       
-          </div>
+        
            <div ref={loaderingscreen} className={styles.mainloading}>
             <img alt="loading.." className={styles.twitterlogo} src={logo}/>
 
            </div>
+           <div className={styles.mainbox}>
+        <Login/>
+       
+          </div>
 
       </Fragment>
 

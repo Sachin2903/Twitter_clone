@@ -9,24 +9,24 @@ import { LuCalendarClock } from 'react-icons/lu';
 import { GrLocation } from 'react-icons/gr';
 import { TweetBoxWithDetail } from "../../../molecules/tweetBox/tweetBoxWithDetail";
 import { useDispatch } from "react-redux";
-import {tweetSlice} from "../../../../slice/managetweetData/managetweetdata"
+import { tweetSlice } from "../../../../slice/managetweetData/managetweetdata"
 export function MidSideBar() {
-    const dispatchfrommid=useDispatch();
-    const tweetref=useRef();
+    const dispatchfrommid = useDispatch();
+    const tweetref = useRef();
 
 
 
-    function addTweetfun(){
-        if(tweetref.current.value.length>0){
-        let length=15;
-        if((tweetref.current.value.length)>40){
-             length=(tweetref.current.value.length)-((tweetref.current.value.length)%41)
-        }else{
-          length=tweetref.current.value.length;
+    function addTweetfun() {
+        if (tweetref.current.value.length > 0) {
+            let length = 15;
+            if ((tweetref.current.value.length) > 40) {
+                length = (tweetref.current.value.length) - ((tweetref.current.value.length) % 41)
+            } else {
+                length = tweetref.current.value.length;
+            }
+            dispatchfrommid(tweetSlice.actions.addTweet(tweetref.current.value.slice(0, length)));
+            tweetref.current.value = "";
         }
-        dispatchfrommid(tweetSlice.actions.addTweet(tweetref.current.value.slice(0,length)));
-        tweetref.current.value="";
-    }
     }
 
 
@@ -47,12 +47,12 @@ export function MidSideBar() {
                 </div>
 
                 <div className={styles.tweet_reactions_icons}>
-                    <GrGallery />
-                    <BsFiletypeGif />
-                    <CgPoll />
-                    <BsEmojiSmile />
-                    <LuCalendarClock />
-                    <GrLocation />
+                    <GrGallery className={styles.icons_ready} />
+                    <BsFiletypeGif className={styles.icons_ready} />
+                    <CgPoll className={styles.icons_ready} />
+                    <BsEmojiSmile className={styles.icons_ready} />
+                    <LuCalendarClock className={styles.icons_ready} />
+                    <GrLocation className={styles.icons_ready} />
                     <button onClick={addTweetfun} className={styles.tweet_btn}>Tweet</button>
                 </div>
                 <p className={styles.showtweets210}>show 210 tweets</p>

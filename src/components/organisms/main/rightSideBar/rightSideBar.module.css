@@ -1,8 +1,8 @@
 .sidebar {
     width: 26%;
     height: 100%;
-    /* 
-    border: 2px solid red; */
+    
+  
     padding: 10px;
 
     border-radius: 20px;
@@ -16,9 +16,10 @@
 }
 
 .input_section {
-    border: 1px solid rgb(215, 215, 215);
+   
     height: 10%;
     display: flex;
+    width: 100%;
     justify-content: center;
     align-items: center;
     border-radius: 12px;
@@ -29,18 +30,22 @@
 
 .input_section .search {
     width: 13%;
+   
     cursor: pointer;
     font-size: 21px;
     color: rgb(27, 169, 225);
 }
 
 .input_section input {
+   
     background-color: #f5f8fa;
     height: 40%;
+    width: 100%;
+    border:transparent;
     padding: 10px 16px;
-    border: transparent;
+    outline:none;
     font-size: 15px;
-    outline: none;
+    
 }
 
 
@@ -48,6 +53,7 @@
 .sidebarcontainer {
     margin-top: 15px;
     margin-left: 20px;
+    max-height: 48vh;
     padding: 20px;
     background-color: #f5f8fa;
     border-radius: 20px;
@@ -71,4 +77,11 @@
     font-size: 15px;
     font-size: inherit;
     margin-top: -15px;
+}
+@media (width<1112px) {
+    .sidebar{
+        display: none;
+    }
+
+    
 }

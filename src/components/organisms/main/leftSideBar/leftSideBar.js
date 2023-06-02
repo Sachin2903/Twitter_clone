@@ -25,10 +25,21 @@ import { useNavigate } from "react-router-dom";
 import { useDispatch} from "react-redux";
 import { tweetSlice } from "../../../../slice/managetweetData/managetweetdata";
 
+import {protectSliceToCheck} from "../../../../slice/protectCheck/protectSlice"
 
 export function LeftSideBar() {
+    let namelocal;
     const dispatchForTweet=useDispatch();
     const tweetRefleft=useRef();
+
+    try{
+        namelocal=localStorage.getItem("userNameByGroup3");
+
+
+    }catch{
+        namelocal="dummy"
+
+    }
 
     function addTweetfunOnLeft(){
         if(tweetRefleft.current.value.length>0){
@@ -71,6 +82,8 @@ export function LeftSideBar() {
     const navigateToLoginPageFromProfile = useNavigate()
 
     function navigateToLoginPage() {
+        dispatchForTweet(protectSliceToCheck.actions.changecheck())
+
         navigateToLoginPageFromProfile('/')
     }
 
@@ -116,20 +129,21 @@ export function LeftSideBar() {
                     </div>
                 </div>
 
-
+                <div className={styles.Tweetbutton}>
                 <Button variant="contained" disableElevation onClick={handleOpen}
                     sx={{
                         borderRadius: '45px',
                         height: '45px',
-                        width: '75%',
+                        width: '60%',
                         boxShadow: 'none',
                         textTransform: 'unset',
-                        fontSize: '16px',
+                        fontSize: '14px',
                         backgroundColor: 'rgb(27, 169, 225)',
-                        "&:hover": { backgroundColor: 'rgb(27, 169, 225)' }
+                        "&:hover": { backgroundColor: 'rgb(27, 169, 225)',
+                     }
                     }}
                 >Tweet</Button>
-
+                </div>
                 <Modal
                     open={forModals}
                     onClose={handleClose}
@@ -171,8 +185,8 @@ export function LeftSideBar() {
                         <img src={logo123} alt="Not Found" />
                     </div>
                     <div className={styles.name_profile_login_logout}>
-                        <h6>dummy </h6>
-                        <p>@dummy123</p>
+                        <h6>{namelocal} </h6>
+                        <p>@{namelocal}123</p>
                         <h4>•••</h4>
                     </div>
                 </div>
@@ -184,20 +198,19 @@ export function LeftSideBar() {
                     <Box sx={{
                         position: 'absolute',
                         top: '82%',
-                        left: '19%',
-                        transform: 'translate(-50%, -50%)',
-                        width: '350px',
-                        minWidth: '250px',
-                        height: '13%',
+                        left: '25%',
+                        width: '200px',
+                        minWidth: '150px',
+                        height: '7%',
                         backgroundColor: 'white',
                         borderRadius: '15px',
                         border: 'none',
-                        padding: '0px 5px',
+                        padding: '0px 1px',
 
                     }}>
                         <div className={styles.inside_modal_logout}>
-                            <button>Add an existing account</button>
-                            <button onClick={navigateToLoginPage}>Logout @msdhoni</button>
+                            
+                            <button onClick={navigateToLoginPage}>Logout @{namelocal}</button>
                         </div>
                     </Box>
                 </Modal>
