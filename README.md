@@ -4,9 +4,6 @@
 
 ## Available Scripts
 
-In the project di![hgvgh](https://github.com/Sachin2903/Twitter_clone_03/assets/92660783/bb7abcad-7242-4807-a9c8-578800fb6a47)
-rectory, you can run:
-
 ### `npm start`
 
 Runs the app in the development mode.\
