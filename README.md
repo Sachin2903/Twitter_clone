@@ -1,6 +1,6 @@
 # Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](h![Screenshot (80)](https://github.com/Sachin2903/Twitter_clone_03/assets/92660783/fe93e4f4-b243-4e36-8167-df2603ed1d0c)
+(h![Screenshot (80)](https://github.com/Sachin2903/Twitter_clone_03/assets/92660783/fe93e4f4-b243-4e36-8167-df2603ed1d0c)
 ttps://github.com/facebook/create-react-app).
 
 ## Available Scripts
