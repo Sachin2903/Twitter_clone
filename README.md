@@ -1,35 +1,49 @@
 
 <h1 align="center">Welcome to twitter_clone_group_03 👋</h1>
-<p>
-  <img alt="Version" src="https://img.shields.io/badge/version-0.1.0-blue.svg?cacheSeconds=2592000" />
-</p>
-=======
-<!-- Improved compatibility of back to top link: See: https://github.com/othneildrew/Best-README-Template/pull/73 -->
-<a name="readme-top"></a>
-<!--
-*** Thanks for checking out the Best-README-Template. If you have a suggestion
-*** that would make this better, please fork the repo and create a pull request
-*** or simply open an issue with the tag "enhancement".
-*** Don't forget to give the project a star!
-*** Thanks again! Now go create something AMAZING! :D
--->
+
+### A Frontend Project(using React) also added similar functionality for user interaction.User have to create account and then login with its own id and can tweet as well as follow unfollow others
+
+
+## Deployment Site link
+Open https://twitter-clone-sachin.netlify.app/ in your browser to view the application
+
+## Some Glimpses
+
+![twitter clone (2)](https://github.com/Sachin2903/Twitter_clone/assets/92660783/68c17108-eee7-4696-9e38-28854279bb55)
+
+
+![twitter clone (3)](https://github.com/Sachin2903/Twitter_clone/assets/92660783/904a5d64-a1b8-4216-b7fa-fac4f74c4386)
+
+
+![twitter clone (4)](https://github.com/Sachin2903/Twitter_clone/assets/92660783/069497e4-9677-4eae-8d27-99f33edea992)
+
+
+[twitter clone (5)](https://github.com/Sachin2903/Twitter_clone/assets/92660783/61c5036e-530c-46e4-a3c0-0657016726cb)
+
+
+![twitter clone (6)](https://github.com/Sachin2903/Twitter_clone/assets/92660783/04f7c6b8-ee4f-461c-b5f2-6e8441691eca)
+
+
+![twitter clone (7)](https://github.com/Sachin2903/Twitter_clone/assets/92660783/167eef4e-9319-4bed-b8cf-3cb5ea72f749)
+
+
+![twitter clone (1)](https://github.com/Sachin2903/Twitter_clone/assets/92660783/c447d7d6-371a-469e-8663-efb82b6fbea2)
 
 
 
-<!-- PROJECT SHIELDS -->
-<!--
-*** I'm using markdown "reference style" links for readability.
-*** Reference links are enclosed in brackets [ ] instead of parentheses ( ).
-*** See the bottom of this document for the declaration of the reference variables
-*** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
-*** https://www.markdownguide.org/basic-syntax/#reference-style-links
--->
-[![Contributors][contributors-shield]][contributors-url]
-[![Forks][forks-shield]][forks-url]
-[![Stargazers][stars-shield]][stars-url]
-[![Issues][issues-shield]][issues-url]
-[![MIT License][license-shield]][license-url]
-[![LinkedIn][linkedin-shield]][linkedin-url]
+## Libraries used in this project:
+1. React and React-Redux
+2. React Icons 
+3. React-Router-Dom
+4. react-uuid
+5. React-Material Ui
+
+## Collaborators:
+1. Sachin Chaturvedi https://github.com/Sachin2903
+2. Manish https://github.com/ManishKuPatra254
+3. Abhay https://github.com/AbhayKhemnar
+4. Zakeer hussain https://github.com/szakeerfu
+
 
 
 ## Install
