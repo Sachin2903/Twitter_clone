@@ -9,7 +9,7 @@
 
 .main {
     position: relative;
-    min-width: 540px;
+
     width: 540px;
     height: 90%;
     border-radius: 15px;
@@ -30,6 +30,7 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
+  
 }
 
 .logo {
@@ -63,14 +64,19 @@
 }
 
 .info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
     width: 85%;
     margin-top: -3rem;
 }
 
-.haedh5 {
-    padding-left: 5rem;
-}
 
+.haedh5{
+    width: 255px;
+  
+}
 
 .specialtext {
     color: rgb(34, 97, 233);

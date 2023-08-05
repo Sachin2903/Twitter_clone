@@ -1,4 +1,4 @@
-import { Fragment, useEffect} from "react";
+import { Fragment, useEffect } from "react";
 import styles from "./login.module.css";
 import { BsTwitter } from "react-icons/bs";
 import { FcGoogle } from "react-icons/fc"
@@ -7,45 +7,40 @@ import { RxCross2 } from "react-icons/rx";
 import TextField from '@mui/material/TextField';
 import { Link } from "react-router-dom";
 import { useRef } from "react";
-import { useSelector,useDispatch } from "react-redux";
-import { protectSliceToCheck} from "../../../slice/protectCheck/protectSlice";
+import { useSelector, useDispatch } from "react-redux";
+import { protectSliceToCheck } from "../../../slice/protectCheck/protectSlice";
 import { useNavigate } from "react-router-dom";
 
 export function Login() {
-    
-    const disToToggle=useDispatch();
+
+    const disToToggle = useDispatch();
     const navigate = useNavigate();
     const navigateToHomeFromlogin = useNavigate();
     const inputbox = useRef("");
     const inputboxalert = useRef("");
 
-    const chek=useSelector((state,action)=>{
+    const chek = useSelector((state, action) => {
         return state.checkBox
     })
 
-   useEffect(()=>{
-   
-   if(!chek){
-    navigateToHomeFromlogin("/home");
+    useEffect(() => {
 
-   }
+        if (!chek) {
+            navigateToHomeFromlogin("/home");
 
-   })
+        }
 
-
-
+    })
 
 
     let userDataFromLocal = JSON.parse(localStorage.getItem("userDataByGroup3"));
-
-
 
     function checkLoginField() {
         if (inputbox.current.value.trim().length <= 0) {
             inputboxalert.current.style.display = "block";
             setTimeout(() => {
                 inputboxalert.current.style.display = "none";
-            }, 4000)
+            }, 3000)
 
         } else {
             let checkInput = (inputbox.current.value.trim()).toLowerCase();
@@ -53,7 +48,7 @@ export function Login() {
             if (userDataFromLocal) {
                 test = userDataFromLocal.find((e) => {
                     if (e.Name.toLowerCase() === checkInput || e.Phone.toLowerCase() === checkInput || e.Email.toLowerCase() === checkInput) {
-                        localStorage.setItem("userNameByGroup3",e.Name.toLowerCase())
+                        localStorage.setItem("userNameByGroup3", e.Name.toLowerCase())
                         return true;
                     }
                     return false;
@@ -97,9 +92,9 @@ export function Login() {
 
                 <button onClick={checkLoginField} className={styles.btnnext}>Next</button>
                 <button className={styles.btnapple}>Forgot password?</button>
-                <p className={styles.headtext}>Don't have an account?<span ref={inputboxalert} className={styles.alertbox}>Sorry, we could not find your account.</span>
+                <h6 className={styles.bottomtext}>Don't have an account?<span ref={inputboxalert} className={styles.alertbox}>Sorry, we could not find your account.</span>
                     <span style={{ color: "rgb(27, 169, 225)", cursor: "pointer" }}>
-                        <Link className={styles.signuptext} to="/signuppage">Sign up</Link></span></p>
+                        <Link className={styles.signuptext} to="/signuppage">Sign up</Link></span></h6>
 
             </div>
 

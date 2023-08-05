@@ -1,5 +1,5 @@
 
-import { Fragment, useRef} from 'react';
+import { Fragment, useRef } from 'react';
 import CreateAcc from './CreateAcc.module.css';
 import { TextField } from '@mui/material';
 import { RxCross2 } from "react-icons/rx";
@@ -10,7 +10,7 @@ import { useNavigate } from 'react-router-dom';
 
 
 export function CreateAccOfTwitter() {
- 
+
     const navigate = useNavigate();
     const regName = useRef("");
     const regPhone = useRef("");
@@ -37,7 +37,7 @@ export function CreateAccOfTwitter() {
 
         if (regexExpForNumber.test(regPhone.current.value) && regexExpForName.test(regName.current.value) && regexExpForEmail.test(regEmail.current.value) && regMonth.current.value.length > 0 && regDate.current.value.length > 0 && regYear.current.value.length > 0) {
             if (!(localStorage.getItem("userDataByGroup3"))) {
-                
+
                 let dataObj = {
                     Name: regName.current.value,
                     Phone: regPhone.current.value,
@@ -48,7 +48,7 @@ export function CreateAccOfTwitter() {
                 localStorage.setItem("userDataByGroup3", JSON.stringify([dataObj]))
                 navigate("/");
             } else {
-                let oldDetail=JSON.parse(localStorage.getItem("userDataByGroup3"));
+                let oldDetail = JSON.parse(localStorage.getItem("userDataByGroup3"));
 
                 let dataObj = {
                     Name: regName.current.value,
@@ -58,8 +58,8 @@ export function CreateAccOfTwitter() {
 
                 }
 
-                
-                localStorage.setItem("userDataByGroup3", JSON.stringify([dataObj,...oldDetail]))
+
+                localStorage.setItem("userDataByGroup3", JSON.stringify([dataObj, ...oldDetail]))
                 navigate("/");
 
 
@@ -85,8 +85,6 @@ export function CreateAccOfTwitter() {
     return (
         <Fragment>
             <div className={CreateAcc.createaccountpage}>
-
-
                 <div className={CreateAcc.main_container_create_acc}>
                     <RxCross2 onClick={() => { navigate("/dummyHome") }} className={CreateAcc.crossbtnaccount} />
 
@@ -94,13 +92,10 @@ export function CreateAccOfTwitter() {
 
                         <h1>Create your account</h1>
 
-
                         <TextField inputRef={regName} label="Name" variant='outlined' className={CreateAcc.input_field}
                             InputLabelProps={{
                                 style: labelStyles,
                             }} />
-
-
 
                         <TextField inputRef={regPhone} label="Phone" variant='outlined' className={CreateAcc.input_field} style={textFieldStyles}
                             InputLabelProps={{
@@ -112,14 +107,13 @@ export function CreateAccOfTwitter() {
                                 style: labelStyles,
                             }} />
 
-
-
                         <div className={CreateAcc.date_section}>
+                            <div>
                             <p id={CreateAcc.first_heading}>Date of birth</p>
                             <p>
                                 This will not be shown publicly. Confirm your own age, even if this account is for a business, a pet, or something else.</p>
-
-
+                            </div>
+                            <div>
                             <select ref={regMonth} className={CreateAcc.select1}>
 
                                 <option value='January'>January</option>
@@ -135,9 +129,6 @@ export function CreateAccOfTwitter() {
                                 <option value='November'>November</option>
                                 <option value='December'>December</option>
                             </select>
-
-
-
                             <select ref={regDate} className={CreateAcc.select}>
                                 <option value='1'>1</option>
                                 <option value='2'>2</option>
@@ -171,10 +162,6 @@ export function CreateAccOfTwitter() {
                                 <option value='30'>30</option>
                                 <option value='31'>31</option>
                             </select>
-
-
-
-
                             <select ref={regYear} className={CreateAcc.select} style={{ width: '100px' }}>
                                 <option value='2000'>2000</option>
                                 <option value='2001'>2001</option>
@@ -204,8 +191,7 @@ export function CreateAccOfTwitter() {
                                 <option value='2025'>2025</option>
                                 <option value='2026'>2026</option>
                             </select>
-
-
+                            </div>
                         </div>
                         <p className={CreateAcc.invalidalert} ref={createAccountAlert}>Invalid details</p>
                         <button onClick={navigateToLogin} className={CreateAcc.btn_create}>Next</button>

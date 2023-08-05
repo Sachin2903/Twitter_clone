@@ -1,16 +1,13 @@
 .loginbox {
-
-    min-width: 540px;
     position: relative;
     width: 540px;
     height: 90%;
     border-radius: 15px;
     background-color: white;
     display: flex;
-    gap:15px;
+  
     align-items: center;
     flex-direction: column;
-
 }
 
 .logotwitter {
@@ -55,7 +52,9 @@
     position: relative;
     margin: 15px 0px;
     width: 50%;
+    
 }
+
 
 .ortext::before {
     content: "───────────";
@@ -86,6 +85,8 @@
         border-radius: 0;
         width: 100vw;
         height: 100vh;
+       
+       
     }
 
 }
@@ -95,20 +96,25 @@
     color: rgb(89, 134, 231);
 
 }
-
+.bottomtext{
+  position: relative;
+    width:55%;
+    
+   
+}
 .alertbox {
     box-shadow: 0 0 3px rgb(68, 67, 67);
     cursor: none;
-    position: absolute;
+    position:absolute;
     display: none;
     z-index: 9999;
     top: 0;
     background-color: rgb(109, 199, 255);
-    height: 6vh;
+    min-height: 6vh;
     border-radius: 6px;
     text-align: center;
-    padding: 1.5vh 0;
-    word-break: break-all;
+    padding:2vh;
     font-family: monospace;
-    width: 120%;
+
+ 
 }

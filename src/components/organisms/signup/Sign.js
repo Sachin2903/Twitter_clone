@@ -19,9 +19,9 @@ export const Sign = () => {
 
           <div className={styles.firsthead}>
             <FaTwitter className={styles.logo} style={{ color: "rgb(27, 169, 225)" }} />
-            <h2>
+            <h3>
               Join Twitter from today
-            </h2>
+            </h3>
             <p className={`${styles.Onelogo} ${styles.nocursor}`} > <FcGoogle /> SignUp with Google</p>
             <p className={`${styles.Onelogo} ${styles.nocursor}`} > < AiFillApple /> SignUp with Apple</p>
             ⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯Or⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯
@@ -30,15 +30,15 @@ export const Sign = () => {
 
           </div>
           <div className={styles.info}>
-            <h5 className={styles.haedh5} >
+            <h6 className={styles.haedh5} >
               BySigning up are agree to <span> Terms of Services</span>
               and<span className={styles.specialtext}>Privacy</span><span className={styles.specialtext}>including</span> <span className={styles.specialtext}>Cookie Use</span>
-            </h5>
+            </h6>
           </div>
-          <h5>
+          <h6>
             Have an account  already ? <Link className={styles.loginredirect} to={"/"}>Login</Link>
 
-          </h5>
+          </h6>
         </div>
       </div>
     </Fragment>
